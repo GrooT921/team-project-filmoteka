@@ -1,0 +1,58 @@
+<header class="header container">
+  <!-- header-container_lib -->
+  <div class="header-container">
+    <nav class="nav">
+      <a class="logo-link" href="">
+        <svg class="logo-icon" width="24" height="24">
+          <use href="/src/images/svg-sprite.svg#icon-film"></use>
+        </svg>
+        <span class="logo-text">Filmoteka</span>
+      </a>
+
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a id="home" class="nav-link current" href="">home</a>
+        </li>
+        <li class="nav-list-item">
+          <a id="library" class="nav-link" href="">my library</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="search">
+      <form class="search-form">
+        <input
+          class="search-input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Movie search"
+        />
+        <button type="submit" class="search-btn">
+          <svg class="icon-search" width="12" height="12">
+            <use href="/src/images/svg-sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="warning-message visually-hidden">
+      <!-- Search result not successful. Enter the correct movie name and -->
+      Search result not successful. Enter the correct movie name and try again.
+    </div>
+    <ul class="library-btn-list visually-hidden">
+      <li class="library-btn-item">
+        <button
+          class="library-btn active-btn"
+          type="button"
+          data-library="watched"
+        >
+          Watched
+        </button>
+      </li>
+      <li class="library-btn-item">
+        <button class="library-btn" type="button" data-library="queue">
+          Queue
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
