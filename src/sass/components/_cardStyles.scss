@@ -2,10 +2,12 @@
   max-width: max-content;
   padding: 0 20px;
   margin: 0 auto;
+  margin-bottom: 40px;
 
    @media screen and (min-width: 768px) {
     max-width: 704px;
     padding: 0 32px;
+    margin-bottom: 60px;
   }
   @media screen and (min-width: 1280px) {
     max-width: 1215px;
@@ -13,11 +15,9 @@
 }
 
 .card__colection {
-  padding-bottom: 40px;
   
 
   @media screen and (min-width: 768px) {
-    padding-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
