@@ -1,0 +1,84 @@
+          /* My library */
+
+  .library__header {
+  position: relative;
+  height: 230px;
+  }
+
+  .library__header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('/src/images/mobile/library-header-bg-mobile.jpg');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('/src/images/mobile/library-header-bg-mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('/src/images/tablet/library-header-bg-tablet.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('/src/images/tablet/library-header-bg-tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('/src/images/desktop/library-header-bg-desktop.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('/src/images/desktop/library-header-bg-desktop@2x.jpg');
+    }
+  }
+  }
+
+  .library__btn-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 40px;
+  }
+  }
+
+  .library__btn-item:first-child {
+  margin-right: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 16px;
+  }
+  }
+
+  .library__btn {
+  width: 130px;
+  height: 44px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  }
+
+  .active__btn {
+  background-color: #FF6B01;
+  border-color: #FF6B01;
+  box-shadow: 0px 8px 43px 0px rgba(255, 107, 1, 0.6);
+  }
