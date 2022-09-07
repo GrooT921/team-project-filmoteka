@@ -8,7 +8,7 @@ const libRefs = {
   libBtnsContainer: document.querySelector('.library-btn-list'),
 };
 
-getTrending(API_KEY, 'movie', 'day').then(data => {
+getTrending(API_KEY, 'movie', 'week').then(data => {
   console.log(data);
   //TODO: Тут потрібно запускати функцію відображення карток, додам як тільки з'являться шаблони карток
 });
