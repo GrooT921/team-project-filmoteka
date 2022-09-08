@@ -8,11 +8,10 @@ const libRefs = {
   libBtnsContainer: document.querySelector('.library-btn-list'),
 };
 
+// Відображення популярних фільмів на головній сторінці
 getTrending(API_KEY, 'movie', 'week').then(data => {
-  console.log(data);
   listMovies(data.results);
-  //TODO: Тут потрібно запускати функцію відображення карток, додам як тільки з'являться шаблони карток
 });
 
 // Для этой всех функций, которые будут выолняться на страничке myLib нужно поставить какой-то if
-// libRefs.libBtnsContainer.addEventListener('click', libBtnsHandler);
+libRefs.libBtnsContainer.addEventListener('click', libBtnsHandler);

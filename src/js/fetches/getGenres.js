@@ -6,7 +6,7 @@ async function getGenres(api_key) {
       `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`
     );
 
-    return response.data;
+    return response.data.genres;
   } catch (error) {
     console.error(error);
   }
