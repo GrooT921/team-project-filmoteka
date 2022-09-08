@@ -1,12 +1,29 @@
 <div class="authorization-backdrop hidden" data-auth-modal>
     <div class="authorization-modal">
         <button type="button" class="close-btn" data-auth-modal-close>X</button>
+        <p class="authorization-modal__tittle">Log into your account</p>
         <form class="authorization-form">
-      <input type="text" name="user-name" placeholder="Login or email" class="authorization-form__input">
-    <input type="text" name="password" placeholder="Password" class="authorization-form__input">
-    <button type="submit" class="authorization-submitbtn">LOGIN</button>
+      <input type="text" name="user-name" placeholder="Login or email" class="authorization-form__input" minlength="6" required>
+    <input type="text" name="password" placeholder="Password" class="authorization-form__input" minlength="8" required>
+    <button type="submit" class="authorization-submitbtn">LOG IN</button>
     </form>
+    <div class="register-form">
+      <p class="authorization-modal__text">Don't have an account?</p>
+    <button type="button" class="register-btn">Register</button>
+    </div>
+    </div>
+
+    <div class="register-modal hidden">
+      <!-- <button type="button" class="close-btn" data-auth-modal-close>X</button> -->
+      <form class="authorization-form">
+        <input type="text" name="user-name" placeholder="Username" class="authorization-form__input" minlength="6" required>
+        <input type="email" name="email" placeholder="Email" class="authorization-form__input" required x-moz-errormessage="Please specify a valid email address.">
+        <input type="text" name="password" placeholder="Password" class="authorization-form__input" minlength="8" required>
+        <button type="submit" class="authorization-submitbtn">SIGN IN</button>
+      </form>
+    
     </div>
 </div>
+
 
 
