@@ -1,5 +1,4 @@
 import './sass/index.scss';
-import './js/library-header';
 import API_KEY from './js/apiKey';
 import getTrending from './js/getTrending';
 import { libBtnsHandler } from './js/utils/lib_btn-swith';

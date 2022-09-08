@@ -1,4 +1,4 @@
-<header class="header">
+<header class="library__header container">
   <div class="header__container">
     <nav class="nav">
       <a class="logo__link" href="">
@@ -10,36 +10,20 @@
 
       <ul class="nav__list">
         <li class="nav__list-item">
-          <a id="home" class="nav__link current" href="/src/index.html">home</a>
+          <a id="home" class="nav__link" href="/src/index.html">home</a>
         </li>
         <li class="nav-list-item">
-          <a id="library" class="nav__link" href="/src/library.html"
+          <a id="library" class="nav__link current" href="/src/library.html"
             >my library</a
           >
         </li>
       </ul>
     </nav>
-    <div class="search">
-      <form class="search__form">
-        <input
-          class="search__input"
-          type="text"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder="Movie search"
-        />
-        <button type="submit" class="search__btn">
-          <svg class="icon__search" width="12" height="12">
-            <use href="/src/images/svg-sprite.svg#icon-search"></use>
-          </svg>
-        </button>
-        <div class="warning__message visually-hidden">
-          Search result not successful. Enter the correct movie name and try
-          again.
-        </div>
-      </form>
+    <div class="warning__message visually-hidden">
+      <!-- Search result not successful. Enter the correct movie name and -->
+      Search result not successful. Enter the correct movie name and try again.
     </div>
-    <ul class="library__btn-list visually-hidden">
+    <ul class="library__btn-list">
       <li class="library__btn-item">
         <button
           class="library__btn active__btn"
