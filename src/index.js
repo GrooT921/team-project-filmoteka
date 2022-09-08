@@ -3,6 +3,7 @@ import './js/library-header';
 import API_KEY from './js/apiKey';
 import getTrending from './js/getTrending';
 import { libBtnsHandler } from './js/utils/lib_btn-swith';
+import { toggleModal } from './js/goit-modal';
 
 const libRefs = {
   libBtnsContainer: document.querySelector('.library-btn-list'),
