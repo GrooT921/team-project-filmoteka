@@ -1,5 +1,6 @@
 import './sass/index.scss';
 import './js/library-header';
+import './js/pagination';
 import API_KEY from './js/apiKey';
 import getTrending from './js/getTrending';
 
