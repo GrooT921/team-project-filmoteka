@@ -1,10 +1,12 @@
 import './sass/index.scss';
-import './js/library-header';
 import './js/pagination';
-import API_KEY from './js/apiKey';
-import getTrending from './js/getTrending';
 
-getTrending(API_KEY, 'movie', 'day').then(data => {
-    console.log(data);
-    //TODO: Тут потрібно запускати функцію відображення карток, додам як тільки з'являться шаблони карток
+import API_KEY from './js/apiKey';
+import getTrending from './js/fetches/getTrending';
+import listMovies from './js/createListMovies';
+import toggleModal from './js/goit-modal';
+
+// Відображення популярних фільмів на головній сторінці
+getTrending(API_KEY, 'movie', 'week').then(data => {
+  listMovies(data.results);
 });
