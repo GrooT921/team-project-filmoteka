@@ -1,8 +1,10 @@
-import { libBtnsHandler } from './js/utils/lib_btn-swith';
+import { libBtnsHandler, renderWatchedFilms } from './js/utils/libBtnSwitch';
 
 const libRefs = {
-  libBtnsContainer: document.querySelector('.library-btn-list'),
+  libBtnsContainer: document.querySelector('.library__btn-list'),
 };
 
-// Для этой всех функций, которые будут выолняться на страничке myLib нужно поставить какой-то if
-libRefs.libBtnsContainer.addEventListener('click', libBtnsHandler);
+window.addEventListener('load', () => {
+  renderWatchedFilms('watched', 'просмотренных');
+  libRefs.libBtnsContainer.addEventListener('click', libBtnsHandler);
+});
