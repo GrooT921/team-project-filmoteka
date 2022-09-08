@@ -1,13 +1,31 @@
 /* Header */
 
 .header {
-  
-
-  
+  padding-top: 40px;
+  padding-bottom: 92px;
   height: 230px;
+  position: relative;
+  margin: 0 auto;
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 80px;
+  }
 }
 
+.container {
+  position: relative;
+  min-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
 .header {
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
@@ -49,13 +67,13 @@
   }
 }
 
-.header__container {
-  padding: 40px 20px 44px;
+// .header__container {
+//   padding: 40px 20px 44px;
 
-  @media screen and (min-width: 768px) {
-    padding: 40px 32px 81px;
-  }
-}
+//   @media screen and (min-width: 768px) {
+//     padding: 40px 32px 81px;
+//   }
+// }
 
 
 .nav {
