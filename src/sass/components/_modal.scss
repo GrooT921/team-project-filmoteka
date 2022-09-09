@@ -75,7 +75,7 @@ font-family: 'Roboto', sans-serif;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.33;
-        margin-right: 20px;
+        // margin-right: 20px;
 
 }
 
@@ -120,11 +120,12 @@ font-family: 'Roboto', sans-serif;
 
 .register-form {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: baseline;
 }
 
-.register-btn {
+.register-btn,
+.login-btn {
     font-family: 'Roboto', sans-serif;
         font-weight: 500;
         font-size: 20px;
@@ -141,5 +142,22 @@ font-family: 'Roboto', sans-serif;
     &:focus {
         color: #FF001B;
         text-decoration: underline 0.5px solid #FF001B;
+    }
+}
+
+.modal-open-btn {
+color: #FF6B08;
+}
+
+.modal-open-btn__icon {
+fill: #FF6B08;
+}
+
+.close-btn__icon {
+    fill: #FF6B08;
+
+    &:hover,
+    &:focus {
+        fill:#FF001B
     }
 }
