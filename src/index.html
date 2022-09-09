@@ -22,9 +22,12 @@
 
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/header.html"></include>
-    <include src="./partials/main.html"></include>
-    <include src="./partials/footer.html"></include>
+    <!-- div для правильного позиционирования футера -->
+    <div class="wrapper">
+      <include src="./partials/header.html"></include>
+      <include src="./partials/main.html"></include>
+      <include src="./partials/footer.html"></include>
+    </div>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
