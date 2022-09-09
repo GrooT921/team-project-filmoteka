@@ -7,6 +7,8 @@ const refs = {
   registerForm: document.querySelector('.register-modal'),
   registerBtn: document.querySelector('.register-btn'),
   authModal: document.querySelector('.authorization-modal'),
+  authForm: document.getElementById('auth-form'),
+  regForm: document.getElementById('reg-form'),
   backToLoginBtn: document.querySelector('.login-btn'),
   modalForm: document.querySelector('.authorization-form'),
 };
@@ -15,10 +17,11 @@ refs.openModalBtn.addEventListener('click', openModal);
 refs.closeModalBtn.addEventListener('click', closeModal);
 refs.registerBtn.addEventListener('click', onRegisterBtn);
 refs.backToLoginBtn.addEventListener('click', onBackToLoginBtn);
+refs.authForm.addEventListener('submit', autentification);
+refs.regForm.addEventListener('submit', registration);
 
 export function openModal(e) {
   refs.modal.classList.remove('hidden');
-  refs.modalForm.addEventListener('submit', autentification);
 }
 
 export function closeModal(e) {
@@ -28,13 +31,9 @@ export function closeModal(e) {
 function onRegisterBtn() {
   refs.registerForm.classList.remove('hidden');
   refs.authModal.classList.add('hidden');
-  refs.modalForm.removeEventListener('submit', autentification);
-  refs.modalForm.addEventListener('submit', registration);
 }
 
 function onBackToLoginBtn() {
   refs.registerForm.classList.add('hidden');
   refs.authModal.classList.remove('hidden');
-  refs.modalForm.removeEventListener('submit', registration);
-  refs.modalForm.addEventListener('submit', autentification);
 }

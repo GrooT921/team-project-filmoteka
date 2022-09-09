@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set, child, get } from 'firebase/database';
 import regValidation from './regValidation';
+import exitBtnHandler from './signOutBtnHandler';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBdaR4YLCQNbvL0nBLOVIY9QfiBV8jMBN8',
@@ -18,8 +19,8 @@ const app = initializeApp(firebaseConfig);
 export function registration(evt) {
   evt.preventDefault();
   const userName = document.getElementById('reg-user-name');
-  const email = document.getElementById('modal-email');
-  const password = document.getElementById('modal-password');
+  const email = document.getElementById('reg-user-email');
+  const password = document.getElementById('reg-user-password');
   if (!regValidation(userName.value, email.value, password.value)) {
     // return Notiflix.Notify.warning('You filled form uncorrect');
     return alert('You filled form uncorrect');
@@ -39,7 +40,7 @@ export function registration(evt) {
       })
         // .then(Notiflix.Notify.success('User Successfuly registraited'))
         .then(alert('User Successfuly registraited !'))
-        .then(document.getElementById('authorization-form').reset())
+        .then(document.getElementById('reg-form').reset())
         .catch(console.log);
     }
   });
@@ -48,8 +49,8 @@ export function registration(evt) {
 export function autentification(evt) {
   evt.preventDefault();
   const db = getDatabase();
-  const userName = document.getElementById('reg-user-name');
-  const password = document.getElementById('modal-password');
+  const userName = document.getElementById('log-user-name');
+  const password = document.getElementById('log-user-password');
   const dbRef = ref(db);
 
   get(child(dbRef, 'UsersList/' + userName.value)).then(snapshot => {
@@ -74,7 +75,7 @@ function logIn(userData) {
   sessionStorage.setItem('userData', JSON.stringify(userData));
   document.querySelector('.close-btn').click();
   renderCurrentUserName();
-  //   addEventListenerOnExitBtn();
+  addEventListenerOnExitBtn();
 }
 
 function renderCurrentUserName() {
@@ -87,13 +88,13 @@ function renderCurrentUserName() {
             id="sign-out-btn"
           >Sign Out
           </button>
-          <p>Hello ,${userNikName} !</p>
+          <span style="color: white;">Hello ,${userNikName} !</span >
     `;
   navUserName.innerHTML = html;
   document.querySelector('.modal-open-btn').classList.add('hidden');
 }
 
-// export function addEventListenerOnExitBtn() {
-//   const exitBtn = document.getElementById('sign-out-btn');
-//   exitBtn.addEventListener('click', exitBtnHandler);
-// }
+function addEventListenerOnExitBtn() {
+  const exitBtn = document.getElementById('sign-out-btn');
+  exitBtn.addEventListener('click', exitBtnHandler);
+}
