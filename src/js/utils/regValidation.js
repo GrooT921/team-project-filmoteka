@@ -6,5 +6,8 @@ export default function regValidation(name, email, pas) {
   if (nameVal.test(name) && emailVal.test(email) && pasVal.test(pas)) {
     return true;
   }
+  console.log(name);
+  console.log(email);
+  console.log(pas);
   return false;
 }

@@ -6,11 +6,11 @@
       </svg>
     </button>
     <p class="authorization-modal__tittle">Log into your account</p>
-    <form class="authorization-form">
+    <form class="authorization-form" id="auth-form">
       <input
         type="text"
         name="user-name"
-        id="reg-user-name"
+        id="log-user-name"
         placeholder="Login or email"
         class="authorization-form__input"
         minlength="6"
@@ -19,7 +19,7 @@
       <input
         type="password"
         name="password"
-        id="modal-password"
+        id="log-user-password"
         placeholder="Password"
         class="authorization-form__input"
         minlength="5"
@@ -38,7 +38,7 @@
       <p class="authorization-modal__tittle">Already have an account?</p>
       <button type="button" class="login-btn">Log in</button>
     </div>
-    <form class="authorization-form">
+    <form class="authorization-form" id="reg-form">
       <input
         type="text"
         name="user-name"
@@ -51,7 +51,7 @@
       <input
         type="email"
         name="email"
-        id="modal-email"
+        id="reg-user-email"
         placeholder="Email"
         class="authorization-form__input"
         required
@@ -60,7 +60,7 @@
       <input
         type="password"
         name="password"
-        id="modal-password"
+        id="reg-user-password"
         placeholder="Password"
         class="authorization-form__input"
         minlength="5"
