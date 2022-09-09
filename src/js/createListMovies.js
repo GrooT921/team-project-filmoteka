@@ -18,7 +18,7 @@ function listMovies(list) {
             ? genresName.slice(0, 2).join(', ') + ' ...'
             : genresName.join(', ');
         const year = new Date(movie.release_date).getFullYear();
-        return `<li class="card__film">
+        return `<li class="card__film" data-id='${movie.id}'>
         <div class="thumb">
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${
           movie.title
