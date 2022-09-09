@@ -108,6 +108,7 @@
 .nav__list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 
   & :not(:first-child) {
     margin-left: 39px;

@@ -1,6 +1,6 @@
 .authorization-backdrop {
     position: fixed;
-    z-index: 99;
+    z-index: 3;
     top: 0;
     left: 0;
     width: 100vw;
@@ -19,12 +19,12 @@
 .authorization-modal,
 .register-modal {
     position: absolute;
-    z-index: 100;
+    z-index: 4;
     top: 50%;
     left: 50%;
-    width: 380px;
+    width: 280px;
     height: auto;
-    padding: 60px 30px;
+    padding: 40px 20px;
     transform: translate(-50%, -50%) scale(1);
     background-color:rgba(0, 0, 0, 0.9);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -32,56 +32,76 @@
 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    @media screen and (min-width: 321px){
+        width: 480px;
+        padding: 60px 30px;
+    }
+
 }
 
 .authorization-backdrop.hidden {
         transform: translate(-50%, -50%) scale(0.8);
     }
+
     
 .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
 
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background:dimgray;
+border: none;
+    background: none;
     border-radius: 50%;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
-        background-color:#FF6B08;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        .close-btn__icon {
+            fill: #FF001B;
+        }
     }
 }
+.close-btn__icon {
+    fill:#FF6B08;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 .authorization-modal__tittle {
 color: #FF6B08;
 font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.33;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 321px){
+font-size: 24px;
+    }
 }
 
 .authorization-modal__text {
     color: #fff;;
     font-family: 'Roboto', sans-serif;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 1.33;
-        // margin-right: 20px;
+        
+    @media screen and (min-width: 321px) {
+        font-size: 16px;
+    }
 
 }
 
 .authorization-form__input {
     width: 100%;
-    height: 40px;
+    height: 30px;
+    color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
     border-top-style: none;
@@ -98,24 +118,32 @@ font-family: 'Roboto', sans-serif;
     &:focus {
         border-bottom: 1px solid #FF001B;
     }
+        @media screen and (min-width: 321px) {
+height: 40px;
+        }
 }
 
 .authorization-submitbtn {
     display: inline-block;
-    padding: 7px 14px;
-    
+    padding: 7px;
+    font-size: 12px;
     text-align: center;
-    color: #FF6B08;
-    border-radius: 20px;
-    background-color:dimgray;
+    color: #FFF;
+    background-color:#FF6B08;
+    border:none;
     margin-bottom: 60px;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background-color:#FF001B;
+        box-shadow: 0px 4px 4px 0px rgba(100, 100, 100, 0.25);
     }
+
+        @media screen and (min-width: 321px) {
+            font-size: 16px;
+        }
 }
 
 .register-form {
@@ -128,7 +156,7 @@ font-family: 'Roboto', sans-serif;
 .login-btn {
     font-family: 'Roboto', sans-serif;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.33;
     background: none;
     border: none;
@@ -143,21 +171,27 @@ font-family: 'Roboto', sans-serif;
         color: #FF001B;
         text-decoration: underline 0.5px solid #FF001B;
     }
+
+        @media screen and (min-width: 321px) {
+        font-size: 20px;
+        }
 }
 
 .modal-open-btn {
-color: #FF6B08;
-}
-
-.modal-open-btn__icon {
-fill: #FF6B08;
-}
-
-.close-btn__icon {
-    fill: #FF6B08;
+    background: none;
+    border: none;
 
     &:hover,
     &:focus {
-        fill:#FF001B
+     .modal-open-btn__icon {
+fill:#fff
     }
+    }
+
+}
+
+.modal-open-btn__icon {
+    width: 24px;
+    height: 24px;
+    fill:#FF001B;
 }
