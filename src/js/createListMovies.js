@@ -8,8 +8,8 @@ function listMovies(list) {
     cardCollection.innerHTML = '';
     const movies = list
       .map(movie => {
-        console.log(movie);
-        const img = 'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/no-images-found.png';
+        const img =
+          'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/no-images-found.png';
         const genresName = movie.genre_ids
           .map(genreId => genres.filter(el => el.id === genreId)[0])
           .map(el => el.name);

@@ -1,0 +1,26 @@
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  z-index: 1;
+  border: none;
+  outline: none;
+  background-color: #000000;
+  color: #ff6b01;
+  cursor: pointer;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#scroll-to-top:hover {
+  background-color: #681f27;
+  color: #ffffff;
+}
+
+#scroll-to-top span {
+  line-height: normal;
+  font-size: 50px;
+}

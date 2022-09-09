@@ -12,6 +12,8 @@ import {showLoader, hideLoader} from './js/loader';
 
 import toggleRegisterModal from './js/authorization-modal';
 
+import scrollToTop from './js/utils/scrollToTop';
+
 const refs = {
   currentPage: 1,
 }
@@ -61,3 +63,5 @@ pagination.on('beforeMove', e => {
   listMovies(data.results);
   }).then(hideLoader);
 });
+
+scrollToTop()
