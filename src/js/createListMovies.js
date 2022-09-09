@@ -8,6 +8,8 @@ function listMovies(list) {
     cardCollection.innerHTML = '';
     const movies = list
       .map(movie => {
+        console.log(movie);
+        const img = 'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/no-images-found.png';
         const genresName = movie.genre_ids
           .map(genreId => genres.filter(el => el.id === genreId)[0])
           .map(el => el.name);
@@ -20,7 +22,7 @@ function listMovies(list) {
         <div class="thumb">
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${
           movie.title
-        }" />
+        }" onerror='this.src="${img}"'/>
         </div>
         <h2 class="card__title">${movie.title}</h2>
         <p class="card__text">
