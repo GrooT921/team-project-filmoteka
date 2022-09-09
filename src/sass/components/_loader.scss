@@ -1,0 +1,72 @@
+ // color #FF6B08 - orange, #FF001B - red from maket
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);  
+  width: 100%;
+  height: 100%;
+
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF6B08;
+    text-shadow: 0 0 10px #FF6B08,
+      0 0 20px #FF6B08;
+  }
+
+  & span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+  }
+
+  & span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FF6B08;
+    box-shadow: 0 0 10px #FF6B08,
+      0 0 20px #FF6B08,
+      0 0 40px #FF6B08;
+    animation: animateLoader 0.5s linear infinite;
+    animation-delay: calc(0.05s * var(--i));
+  }
+  &.is-hidden {
+    display: none;
+  }
+}
+
+ @keyframes animateLoader {
+   0% {
+     transform: scale(1);
+   }
+
+   100% {
+     transform: scale(0);
+   }
+ }
+
+.scroll-hidden{
+  overflow: hidden;
+}
