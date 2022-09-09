@@ -9,26 +9,26 @@
         <span class="logo-text">Filmoteka</span>
       </a>
 
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          <a id="home" class="nav-link current" href="">home</a>
+      <ul class="nav__list">
+        <li class="nav__list-item">
+
+          <button type="button" class="modal-open" data-auth-modal-open>
+            Login
+          </button>
+        </li>
+        <li class="nav__list-item">
+          <a id="home" class="nav__link current" href="/src/index.html">home</a>
         </li>
         <li class="nav-list-item">
-          <a id="library" class="nav-link" href="">my library</a>
+          <a id="library" class="nav__link" href="/src/library.html">my library</a>
         </li>
       </ul>
     </nav>
     <div class="search">
-      <form class="search-form">
-        <input
-          class="search-input"
-          type="text"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder="Movie search"
-        />
-        <button type="submit" class="search-btn">
-          <svg class="icon-search" width="12" height="12">
+      <form class="search__form">
+        <input class="search__input" type="text" name="searchQuery" autocomplete="off" placeholder="Movie search" />
+        <button type="submit" class="search__btn">
+          <svg class="icon__search" width="12" height="12">
             <use href="/src/images/svg-sprite.svg#icon-search"></use>
           </svg>
         </button>
@@ -37,23 +37,19 @@
     <div class="warning-message visually-hidden">
       <!-- Search result not successful. Enter the correct movie name and -->
       Search result not successful. Enter the correct movie name and try again.
+      </p>
+      <ul class="library__btn-list visually-hidden">
+        <li class="library__btn-item">
+          <button class="library__btn active__btn" type="button" data-library="watched">
+            Watched
+          </button>
+        </li>
+        <li class="library-btn-item">
+          <button class="library-btn" type="button" data-library="queue">
+            Queue
+          </button>
+        </li>
+      </ul>
+      <div id="answer"></div>
     </div>
-    <ul class="library-btn-list visually-hidden">
-      <li class="library-btn-item">
-        <button
-          class="library-btn active-btn"
-          type="button"
-          data-library="watched"
-        >
-          Watched
-        </button>
-      </li>
-      <li class="library-btn-item">
-        <button class="library-btn" type="button" data-library="queue">
-          Queue
-        </button>
-      </li>
-    </ul>
-    <div id="answer"></div>
-  </div>
 </header>

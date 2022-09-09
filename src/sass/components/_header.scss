@@ -86,26 +86,20 @@
   }
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-list {
-  display: flex;
-}
-
-.nav-list {
+.nav__list {
   display: flex;
   margin-left: auto;
 }
 
-.nav-list :not(:first-child) {
-  margin-left: 39px;
+  & :not(:first-child) {
+    margin-left: 39px;
+  }
 }
 
-.nav-link {
+
+.nav__link {
+  position: relative;
+  height: 14px;
   text-decoration: none;
   position: relative;
   font-size: 12px;
