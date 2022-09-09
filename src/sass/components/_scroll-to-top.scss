@@ -2,7 +2,7 @@
   display: none;
   position: fixed;
   bottom: 35px;
-  right: 35px;
+  left: calc(50% + 115px);
   z-index: 1;
   border: none;
   outline: none;
@@ -10,9 +10,20 @@
   color: #ff6b01;
   cursor: pointer;
   padding: 0;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    left: calc(50% + 295px);
+    width: 50px;
+    height: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    left: calc(50% + 545px);
+    width: 60px;
+    height: 60px;
+  }
 }
 
 #scroll-to-top:hover {
@@ -22,5 +33,12 @@
 
 #scroll-to-top span {
   line-height: normal;
-  font-size: 50px;
+  font-size: 30px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 50px;
+  }
 }

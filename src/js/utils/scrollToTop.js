@@ -18,7 +18,7 @@ function scrollToTop() {
   }
 
   // When the user clicks on the scrollUp, scroll to the top of the document
-  // Кщли користувач клікає на кнопку, сторінка скролиться вверх
+  // Коли користувач клікає на кнопку, сторінка скролиться вверх
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
