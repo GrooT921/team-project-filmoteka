@@ -1,37 +1,75 @@
 <div class="authorization-backdrop hidden" data-auth-modal>
-    <div class="authorization-modal">
-        <button type="button" class="close-btn" data-auth-modal-close>
-          <svg class="close-btn__icon">
-            <use src="/src/images/svg-sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-        <p class="authorization-modal__tittle">Log into your account</p>
-        <form class="authorization-form">
-      <input type="text" name="user-name" placeholder="Login or email" class="authorization-form__input" minlength="6" required>
-    <input type="password" name="password" placeholder="Password" class="authorization-form__input" minlength="8" required>
-    <button type="submit" class="authorization-submitbtn">LOG IN</button>
+  <div class="authorization-modal">
+    <button type="button" class="close-btn" data-auth-modal-close>
+      <svg class="close-btn__icon">
+        <use src="/src/images/svg-sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <p class="authorization-modal__tittle">Log into your account</p>
+    <form class="authorization-form">
+      <input
+        type="text"
+        name="user-name"
+        id="reg-user-name"
+        placeholder="Login or email"
+        class="authorization-form__input"
+        minlength="6"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        id="modal-password"
+        placeholder="Password"
+        class="authorization-form__input"
+        minlength="5"
+        required
+      />
+      <button type="submit" class="authorization-submitbtn">LOG IN</button>
     </form>
     <div class="register-form">
       <p class="authorization-modal__text">Don't have an account?</p>
-    <button type="button" class="register-btn">Register</button>
+      <button type="button" class="register-btn">Register</button>
     </div>
-    </div>
+  </div>
 
-    <div class="register-modal hidden">
-      <div class="register-form">
-        <p class="authorization-modal__tittle">Already have an account?</p>
+  <div class="register-modal hidden">
+    <div class="register-form">
+      <p class="authorization-modal__tittle">Already have an account?</p>
       <button type="button" class="login-btn">Log in</button>
-      </div>
-      <form class="authorization-form">
-        <input type="text" name="user-name" placeholder="Username" class="authorization-form__input" minlength="6" required>
-        <input type="email" name="email" placeholder="Email" class="authorization-form__input" required x-moz-errormessage="Please specify a valid email address.">
-        <input type="password" name="password" placeholder="Password" class="authorization-form__input" minlength="8" required>
-        <button type="submit" class="authorization-submitbtn">SIGN IN</button>
-      </form>
-    
     </div>
+    <form class="authorization-form">
+      <input
+        type="text"
+        name="user-name"
+        id="reg-user-name"
+        placeholder="Username"
+        class="authorization-form__input"
+        minlength="6"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        id="modal-email"
+        placeholder="Email"
+        class="authorization-form__input"
+        required
+        x-moz-errormessage="Please specify a valid email address."
+      />
+      <input
+        type="password"
+        name="password"
+        id="modal-password"
+        placeholder="Password"
+        class="authorization-form__input"
+        minlength="5"
+        required
+      />
+      <button type="submit" class="authorization-submitbtn">SIGN IN</button>
+    </form>
+  </div>
 </div>
 
 <!-- <a target="_blank" href="https://icons8.com/icon/UWryaegOsEel/log-in">log in</a> icon by <a target="_blank"
   href="https://icons8.com">Icons8</a> -->
-
