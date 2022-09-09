@@ -7,6 +7,7 @@ import listMovies from './js/createListMovies';
 import toggleModal from './js/goit-modal';
 import openModal from './js/authorization-modal';
 import closeModal from './js/authorization-modal';
+import toggleRegisterModal from './js/authorization-modal';
 
 // Відображення популярних фільмів на головній сторінці
 getTrending(API_KEY, 'movie', 'week').then(data => {

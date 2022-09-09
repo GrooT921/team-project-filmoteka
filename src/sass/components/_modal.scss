@@ -16,16 +16,17 @@
     pointer-events: none;
 }
 
-.authorization-modal {
+.authorization-modal,
+.register-modal {
     position: absolute;
     z-index: 100;
     top: 50%;
     left: 50%;
     width: 380px;
-    height: 480px;
+    height: auto;
     padding: 60px 30px;
     transform: translate(-50%, -50%) scale(1);
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color:rgba(0, 0, 0, 0.9);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
 
@@ -54,9 +55,28 @@
 
     &:hover,
     &:focus {
-        background-color:darkred;
+        background-color:#FF6B08;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
+}
+
+.authorization-modal__tittle {
+color: #FF6B08;
+font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.33;
+    margin-bottom: 20px;
+}
+
+.authorization-modal__text {
+    color: #fff;;
+    font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.33;
+        margin-right: 20px;
+
 }
 
 .authorization-form__input {
@@ -76,7 +96,7 @@
 
     &:hover,
     &:focus {
-        border-bottom: 1px solid darkred;
+        border-bottom: 1px solid #FF001B;
     }
 }
 
@@ -85,15 +105,41 @@
     padding: 7px 14px;
     
     text-align: center;
-    color: darkred;
+    color: #FF6B08;
     border-radius: 20px;
     background-color:dimgray;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.register-form {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.register-btn {
+    font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.33;
+    background: none;
+    border: none;
+    color: #FF6B08;
+    padding: 0;
+    text-decoration: underline 1px solid #FF6B08;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: #FF001B;
+        text-decoration: underline 0.5px solid #FF001B;
     }
 }
