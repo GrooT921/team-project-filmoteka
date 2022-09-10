@@ -11,6 +11,7 @@ import {showLoader, hideLoader} from './js/loader';
 import toggleRegisterModal from './js/authorization-modal';
 import scrollToTop from './js/utils/scrollToTop';
 import { topFunction } from './js/utils/scrollToTop'
+import Pagination from 'tui-pagination';
 
 const refs = {
   currentPage: 1,
@@ -29,8 +30,6 @@ getTrending(API_KEY, 'movie', 'week', refs.currentPage).then(data => {
 }).then(hideLoader);
 
 // Пагинация
-import Pagination from 'tui-pagination';
-
 const container = document.getElementById('pagination-container');
 const options = {
 totalItems: 20,
