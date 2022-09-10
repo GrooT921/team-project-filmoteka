@@ -1,27 +1,28 @@
 import './sass/index.scss';
-// import './js/pagination';
-
 import API_KEY from './js/apiKey';
 import getTrending from './js/fetches/getTrending';
+import getSearch from './js/fetches/getSearch';
 import listMovies from './js/createListMovies';
 import toggleModal from './js/goit-modal';
 import openModal from './js/authorization-modal';
 import closeModal from './js/authorization-modal';
 import './js/modal-form';
-
-
 import {showLoader, hideLoader} from './js/loader';
-
 import toggleRegisterModal from './js/authorization-modal';
-
 import scrollToTop from './js/utils/scrollToTop';
 
 const refs = {
   currentPage: 1,
-}
+  keyWord: '',
+  cardCollection: document.querySelector('.card__colection'),
+  searchForm: document.querySelector('.search__form'),
+  alert: document.querySelector('.warning__message'),
+};
+
+var throttle = require('lodash.throttle');
 
 // Відображення популярних фільмів на головній сторінці
-getTrending(API_KEY, 'movie', 'week').then(data => {
+getTrending(API_KEY, 'movie', 'week', refs.currentPage).then(data => {
   listMovies(data.results);
   pagination.reset(data.total_results);
 }).then(hideLoader);
@@ -65,5 +66,49 @@ pagination.on('beforeMove', e => {
   listMovies(data.results);
   }).then(hideLoader);
 });
+//Поиск по слову
+refs.searchForm.addEventListener('input', throttle(onInputEnter, 500));
 
-scrollToTop()
+function onInputEnter(e) {
+  refs.keyWord = e.target.value;
+};
+
+refs.searchForm.addEventListener('submit', throttle(onSubmitBtnClick, 500));
+
+function onSubmitBtnClick(e) {
+  e.preventDefault();
+  const keyWord = refs.keyWord;
+  console.log(keyWord);
+  getSearch(keyWord, API_KEY, refs.currentPage).then(data => {
+    if (data.results.length !== 0) {
+      refs.alert.classList.add('visually-hidden');
+      listMovies(data.results);
+      pagination.reset(data.total_results);
+      refs.searchForm.reset();
+    } else {
+      refs.alert.classList.remove('visually-hidden');
+      refs.searchForm.reset();
+    };
+  }).then(hideLoader);
+};
+
+function catchError(error) {
+   console.error(error);
+}
+
+import axios from 'axios';
+
+async function getSearch(keyWord, api_key, page) {
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${keyWord}&page=${page}&include_adult=false`
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export default getSearch;
+
+scrollToTop();
