@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     modal: document.querySelector('[data-modal]'),
     form: document.querySelector('.form'),
     card: document.querySelector('.list'),
+    body: document.querySelector('body'),
   };
+
+
 
   function getCurrentGenres(genreList) {
     return genreList
@@ -59,11 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
         original_title,
         overview,
       } = data;
+      const img =
+    'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/no-images-found.png';
       const form_html = `
         <form class="form">
         <div class="form__film-card">
         <div class="form__film-img">
-            <img class="form-img" src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}" >
+            <img class="form-img" src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}"
+            onerror='this.src="${img}"'/>
         </div>
         </div>
         <div class="form__info">
@@ -71,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <ul class="form__info-list">
             <li class="form__info-item">
                 <p class="form__info-name">Vote / Votes</p>
-                <p class="form__info-details"> <span class="film__rating">${vote_average}</span> / ${vote_count}</p>
+                <p class="form__info-details"> <span class="film__rating">${vote_average.toFixed(1)}</span> / ${vote_count}</p>
             </li>
             <li class="form__info-item">
                 <p class="form__info-name">Popularity</p>
@@ -93,12 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="form__btn-list">
             <button data-action=${
               Film.isFilmExistInWatched(data.id)[0]
-            } id="watched" class="form-button form-active-btn" type="button">${
+            } id="watched" class="form-button form-add-btn" type="button">${
         Film.isFilmExistInWatched(data.id)[1]
       }</button>
             <button data-action=${
               Film.isFilmExistInQueue(data.id)[0]
-            } id="queue" class="form-button" type="button">${
+            } id="queue" class="form-button form-queue-btn" type="button">${
         Film.isFilmExistInQueue(data.id)[1]
       }</button>
         </div>
@@ -116,10 +122,25 @@ document.addEventListener('DOMContentLoaded', () => {
         actionQueue(event, data);
       });
       openModal();
+      disableScroll ();
+      
     });
   };
+  
 
   document.addEventListener('click', modalForm);
+
+  // document.getElementById('btn-close').addEventListener('click', closeModal);
+
+  document.getElementById('btn-close').addEventListener('click', () => {
+    closeModal();
+    scroll ()
+  });
+
+  document.addEventListener('click', e => {
+    if (e.target.classList.contains('modal_overlay')) {
+      closeModal();
+      scroll ()
 
   document.getElementById('btn-close').addEventListener('click', () => {
     closeModal();
@@ -133,18 +154,36 @@ document.addEventListener('DOMContentLoaded', () => {
       // document.querySelector('.library__btn').classList.contains('active__btn')
       //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
       //   : Film.renderWatchedFilms('queueFilms', 'запланированных');
+
     }
   });
 
   document.addEventListener('keydown', e => {
     if (e.code === 'Escape') {
       closeModal();
+      scroll ()
+
       // document.querySelector('.library__btn').classList.contains('active__btn')
       //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
       //   : Film.renderWatchedFilms('queueFilms', 'запланированных');
+
     }
   });
+
+  function disableScroll (){
+  // refs.body.classList.add('disable-scroll')
+  document.body.style.position = 'fixed';
+document.body.style.width = '100%';
+  }
+
+  function scroll (){
+    // refs.body.classList.add('disable-scroll')
+    document.body.style.position = '';
+    document.body.style.top = '';
+    }
 });
+
+
 
 // if(false){
 

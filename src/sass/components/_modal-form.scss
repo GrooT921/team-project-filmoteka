@@ -91,12 +91,15 @@
      }
 }
 .form__info {
+    max-height: 850px;
     @media screen and (min-width: 768px) {
         margin-left: 68px;
+        max-height: 470px;
     
   }
     @media screen and (min-width: 1280px) {
         margin-left: 18px;
+        max-height: 478px;
         }
    
 }
@@ -139,13 +142,15 @@ color: #000000;
 // ABOUT
 .form__about-details {
     width: 240px;
-    height: auto; 
-font-size: 12px;
-line-height: 20px;
-color: #000000;
+    max-height: 200px;
+    overflow: auto;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    
+    
 @media screen and (min-width: 768px) {
     width: 264px;
-   
 }
 @media screen and (min-width: 1280px) {
     width: 391px;
@@ -157,9 +162,7 @@ color: #000000;
 align-items: center;
 text-transform: uppercase;
 }
-// .form__about-details {
-//     line-height: 20px;
-// }
+
 .form__about{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -192,15 +195,37 @@ text-transform: uppercase;
 .form-button:not(:last-child){
 margin-right: 15px;
 }
-.form-button:hover,
-.form-button:focus,
-.form-active-btn {
+
+.form-add-btn {
     color: #fff;
     box-shadow: none;
     cursor: auto;
     background-color: #ff6b08;
     border: 1px solid #ff6b08;
 }
+
+// .form-button:hover,
+// .form-button:focus{
+//     color: #fff;
+//     box-shadow: none;
+//     cursor: auto;
+//     background-color: #ff6b08;
+//     border: 1px solid #ff6b08;
+// }
+.form-queue-btn:hover,
+.form-queue-btn:focus,
+.form-add-btn:hover,
+.form-add-btn:focus {
+    color: #ff6b08;
+    box-shadow: none;
+    cursor: auto;
+    background-color: #fff;
+    border: 1px solid #ff6b08;
+}
+
+
+
+// BUTTON-CLOSE
 .btn-close {
     display: flex;
     align-items: center;
@@ -243,6 +268,11 @@ margin-right: 15px;
     width: 100%; 
   }  
  }  
+ body.modal.active {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
 
 
 // .modal {
