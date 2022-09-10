@@ -123,25 +123,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('btn-close').addEventListener('click', () => {
     closeModal();
-    document.querySelector('.library__btn').classList.contains('active__btn')
-      ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-      : Film.renderWatchedFilms('queueFilms', 'запланированных');
+    // document.querySelector('.library__btn').classList.contains('active__btn')
+    //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
+    //   : Film.renderWatchedFilms('queueFilms', 'запланированных');
   });
   document.addEventListener('click', e => {
     if (e.target.classList.contains('modal_overlay')) {
       closeModal();
-      document.querySelector('.library__btn').classList.contains('active__btn')
-        ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-        : Film.renderWatchedFilms('queueFilms', 'запланированных');
+      // document.querySelector('.library__btn').classList.contains('active__btn')
+      //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
+      //   : Film.renderWatchedFilms('queueFilms', 'запланированных');
     }
   });
 
   document.addEventListener('keydown', e => {
     if (e.code === 'Escape') {
       closeModal();
-      document.querySelector('.library__btn').classList.contains('active__btn')
-        ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-        : Film.renderWatchedFilms('queueFilms', 'запланированных');
+      // document.querySelector('.library__btn').classList.contains('active__btn')
+      //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
+      //   : Film.renderWatchedFilms('queueFilms', 'запланированных');
     }
   });
 });
