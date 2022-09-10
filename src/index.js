@@ -10,6 +10,7 @@ import './js/modal-form';
 import {showLoader, hideLoader} from './js/loader';
 import toggleRegisterModal from './js/authorization-modal';
 import scrollToTop from './js/utils/scrollToTop';
+import { topFunction } from './js/utils/scrollToTop'
 
 const refs = {
   currentPage: 1,
@@ -64,7 +65,7 @@ pagination.on('beforeMove', e => {
   refs.currentPage = e.page;
   getTrending(API_KEY, 'movie', 'week', refs.currentPage).then(data => {
   listMovies(data.results);
-  }).then(hideLoader);
+  }).then(topFunction).then(hideLoader);
 });
 //Поиск по слову
 refs.searchForm.addEventListener('input', throttle(onInputEnter, 500));
