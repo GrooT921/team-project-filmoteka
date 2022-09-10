@@ -8,7 +8,10 @@ function listMovies(list) {
     cardCollection.innerHTML = '';
     const movies = list
       .map(movie => {
-        const img = require('../images/no-images-found.png');
+        const imgError =  require('../images/no-images-found.png');
+        const imgSrc = movie.poster_path
+        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+        : imgError;
         const genresName = movie.genre_ids
           .map(genreId => genres.filter(el => el.id === genreId)[0])
           .map(el => el.name);
@@ -21,9 +24,9 @@ function listMovies(list) {
           : '0000';
         return `<li class="card__film" >
         <div class="thumb" data-id='${movie.id}'>
-          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${
+          <img src="${imgSrc}" alt="${
           movie.title
-        }" onerror='this.src="${img}"'/>
+        }" onerror='this.src="${imgError}"'/>
         </div>
         <h2 class="card__title">${movie.title}</h2>
         <p class="card__text">
