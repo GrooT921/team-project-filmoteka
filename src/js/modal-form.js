@@ -141,6 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target.classList.contains('modal_overlay')) {
       closeModal();
       scroll ()
+    }
+  })
 
   document.getElementById('btn-close').addEventListener('click', () => {
     closeModal();
