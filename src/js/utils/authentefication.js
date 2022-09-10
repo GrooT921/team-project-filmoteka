@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set, child, get } from 'firebase/database';
+import { Film } from '../film/film';
 import regValidation from './regValidation';
 import exitBtnHandler from './signOutBtnHandler';
 
@@ -62,6 +63,14 @@ export function autentification(evt) {
         //   `You Successfuly enter in your accaunt  ${userName.value} !`
         // );
         // Film.renderCurrentUserFilmList(userName.value);
+        Film.setCurrentUserFilmList(userName.value);
+        setTimeout(() => {
+          document
+            .querySelector('.library__btn')
+            .classList.contains('active__btn')
+            ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
+            : Film.renderWatchedFilms('queueFilms', 'запланированных');
+        }, 50);
         logIn(snapshot.val());
       }
     } else {
@@ -74,11 +83,12 @@ export function autentification(evt) {
 function logIn(userData) {
   sessionStorage.setItem('userData', JSON.stringify(userData));
   document.querySelector('.close-btn').click();
+
   renderCurrentUserName();
   addEventListenerOnExitBtn();
 }
 
-function renderCurrentUserName() {
+export function renderCurrentUserName() {
   const userNikName = JSON.parse(sessionStorage.getItem('userData')).userName;
   const navUserName = document.getElementById('user-name-contain');
 
@@ -94,7 +104,7 @@ function renderCurrentUserName() {
   document.querySelector('.modal-open-btn').classList.add('hidden');
 }
 
-function addEventListenerOnExitBtn() {
+export function addEventListenerOnExitBtn() {
   const exitBtn = document.getElementById('sign-out-btn');
   exitBtn.addEventListener('click', exitBtnHandler);
 }

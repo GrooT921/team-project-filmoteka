@@ -1,88 +1,197 @@
 export const students = [
   {
     name:
-      'Студент команды GoIT',
+      'Семенов Дмитро',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/semenov-dmitro-opt.jpg',
+    role: 'Тимлид',
     participation: 'Делал то-то.....',
   },
   {
     name:
-      'Студент команды GoIT',
+      'Тонковид Ігор',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/tonkovid-igor-opt.jpg',
+    role: 'Скрам-мастер',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Толстіков Олександр',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+    'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/tolstikov-oleksandr-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Салівон Оксана',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/salivon-oksana-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Татаренко Олександр',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/tatarenko-olexandr-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Стариковська Марина',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/starikivska-marina-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Величко Данило',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/danya-velichko-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Лужна Христина',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/luzhna-hristina-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Петро Сапронов',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/petro-sapronov-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Гринюк Богдан',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/griniuk-bogdan-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Чорна Надія',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/chorna-nadiya-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
-  },{
+  },
+{
     name:
-      'Студент команды GoIT',
+      'Сметюк Олена',
     image:
-      'https://i.pinimg.com/736x/56/fe/9a/56fe9a3bafcee5ea704e496bc83e6992.jpg',
-    part: 'Project part',
+      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/smetiuk-olena-opt.jpg',
+    role: 'Project part',
     participation: 'Делал то-то.....',
   },
 ];
+
+// export const students = [
+//   {
+//     name:
+//       'Семенов Дмитро',
+//     image:
+//       './images/goit-students/semenov-dmitro-opt.jpg',
+//     role: 'Тимлид',
+//     participation: 'Делал то-то.....',
+//   },
+//   {
+//     name:
+//       'Тонковид Ігор',
+//     image:
+//       './images/goit-students/tonkovid-igor-opt.jpg',
+//     role: 'Скрам-мастер',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Толстіков Олександр',
+//     image:
+//     './images/goit-students/tolstikov-oleksandr-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Салівон Оксана',
+//     image:
+//       './images/goit-students/salivon-oksana-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Татаренко Олександр',
+//     image:
+//       './images/goit-students/tatarenko-olexandr-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Стариковська Марина',
+//     image:
+//       './images/goit-students/starikivska-marina-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Величко Данило',
+//     image:
+//       './images/goit-students/danya-velichko-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Лужна Христина',
+//     image:
+//       './images/goit-students/luzhna-hristina-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Петро Сапронов',
+//     image:
+//       './images/goit-students/petro-sapronov-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Гринюк Богдан',
+//     image:
+//       './images/goit-students/griniuk-bogdan-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Чорна Надія',
+//     image:
+//       './images/goit-students/chorna-nadiya-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// {
+//     name:
+//       'Сметюк Олена',
+//     image:
+//       './images/goit-students/smetiuk-olena-opt.jpg',
+//     role: 'Project part',
+//     participation: 'Делал то-то.....',
+//   },
+// ];

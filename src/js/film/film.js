@@ -1,4 +1,13 @@
 // import { getCurrentGenres } from '../modal-form';
+import {
+  getDatabase,
+  ref,
+  set,
+  child,
+  get,
+  push,
+  remove,
+} from 'firebase/database';
 
 export class Film {
   static createWithoutAuth(newFilm, folder) {
@@ -8,14 +17,34 @@ export class Film {
   }
   static removeWithoutAuth(filmId, folder) {
     const index = findFilmById(filmId, folder);
-    console.log(index);
     const filmsList = getFilmsFromLocalStorage(folder);
     filmsList.splice(index, 1);
     localStorage.setItem(`${folder}`, JSON.stringify(filmsList));
   }
 
+  static removeWithAuth(filmId, folder, userName) {
+    const db = getDatabase();
+    Film.removeWithoutAuth(filmId, folder);
+    remove(ref(db, `UsersList/${userName}/${folder}/` + `${filmId}`));
+  }
+
+  static createWithtAuth(newFilm, folder, userName) {
+    const db = getDatabase();
+    const dbRef = ref(db);
+    Film.createWithoutAuth(newFilm, folder);
+    set(ref(db, `UsersList/${userName}/${folder}/` + `${newFilm.id}`), {
+      release_date: newFilm.release_date,
+      genres: newFilm.genres,
+      id: newFilm.id,
+      poster_path: newFilm.poster_path,
+      title: newFilm.title,
+      vote_average: newFilm.vote_average,
+    }).catch(console.log);
+  }
+
   static renderWatchedFilms(folder, rewWords) {
     const films = getFilmsFromLocalStorage(folder);
+    console.log(films.length);
     const list = films.length
       ? films.map(createOneFilmCard).join('')
       : `<p style="text-align: center;">У вас ещё нету ${rewWords} фильмов :(</p>`;
@@ -36,6 +65,33 @@ export class Film {
     } else {
       return ['remove', 'Remove from queue'];
     }
+  }
+  static setCurrentUserFilmList(userName) {
+    const db = getDatabase();
+    const dbRef = ref(db);
+
+    get(child(dbRef, `UsersList/${userName}/` + 'watchedFilms')).then(
+      snapshot => {
+        if (snapshot.exists()) {
+          //   console.log(dbDataHandler(snapshot.val()));
+          localStorage.setItem(
+            'watchedFilms',
+            JSON.stringify(dbDataHandler(snapshot.val()))
+          );
+        }
+      }
+    );
+
+    get(child(dbRef, `UsersList/${userName}/` + 'queueFilms')).then(
+      snapshot => {
+        if (snapshot.exists()) {
+          localStorage.setItem(
+            'queueFilms',
+            JSON.stringify(dbDataHandler(snapshot.val()))
+          );
+        }
+      }
+    );
   }
 }
 
@@ -75,4 +131,13 @@ function createOneFilmCard(film) {
             class="card__vote_average">${film.vote_average.toFixed(1)}</span>
         </p>
       </li>`;
+}
+
+function dbDataHandler(data) {
+  let list = [];
+  for (const key in data) {
+    const element = data[key];
+    list.push(element);
+  }
+  return list;
 }
