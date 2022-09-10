@@ -30,7 +30,6 @@ getTrending(API_KEY, 'movie', 'week', refs.currentPage).then(data => {
 
 // Пагинация
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
 
 const container = document.getElementById('pagination-container');
 const options = {
