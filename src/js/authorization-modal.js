@@ -21,7 +21,6 @@ refs.authForm.addEventListener('submit', autentification);
 refs.regForm.addEventListener('submit', registration);
 
 document.addEventListener("keydown", e => {
-  e.preventDefault();
   if (e.code === "Escape") {
     refs.modal.classList.add('hidden');
   }
