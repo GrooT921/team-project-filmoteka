@@ -1,7 +1,7 @@
 import { Film } from './js/film/film';
 import { libBtnsHandler } from './js/utils/libBtnSwitch';
 import { openModal, closeModal } from './js/authorization-modal';
-
+import './js/modal-form';
 const libRefs = {
   libBtnsContainer: document.querySelector('.library__btn-list'),
 };
