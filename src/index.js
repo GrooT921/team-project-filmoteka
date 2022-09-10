@@ -1,5 +1,4 @@
 import './sass/index.scss';
-// import './js/pagination';
 
 import API_KEY from './js/apiKey';
 import getTrending from './js/fetches/getTrending';
@@ -8,16 +7,28 @@ import listMovies from './js/createListMovies';
 import toggleModal from './js/goit-modal';
 import openModal from './js/authorization-modal';
 import closeModal from './js/authorization-modal';
+<<<<<<< Updated upstream
 
+=======
+import './js/modal-form';
+>>>>>>> Stashed changes
 import {showLoader, hideLoader} from './js/loader';
-
 import toggleRegisterModal from './js/authorization-modal';
+<<<<<<< Updated upstream
+=======
+import scrollToTop from './js/utils/scrollToTop';
+>>>>>>> Stashed changes
 
 const refs = {
   currentPage: 1,
   keyWord: '',
   cardCollection: document.querySelector('.card__colection'),
+<<<<<<< Updated upstream
   searchForm: document.querySelector('.search__form')
+=======
+  searchForm: document.querySelector('.search__form'),
+  alert: document.querySelector('.warning__message')
+>>>>>>> Stashed changes
 };
 
 var throttle = require('lodash.throttle');
@@ -74,6 +85,30 @@ function onInputEnter(e) {
   e.preventDefault();
   refs.keyWord = e.target.value;
 };
+<<<<<<< Updated upstream
+=======
+
+refs.searchForm.addEventListener('submit', throttle(onSubmitBtnClick, 500));
+
+function onSubmitBtnClick(e) {
+  e.preventDefault();
+  const keyWord = refs.keyWord;
+  console.log(keyWord);
+  getSearch(keyWord, API_KEY, refs.currentPage).then(data => {
+    if (data.results.length > 0) {
+      refs.alert.classList.toggle('visually-hidden');
+      listMovies(data.results);
+      pagination.reset(data.total_results);
+    } else { 
+      refs.alert.classList.toggle('visually-hidden');
+    }
+  }).then(hideLoader);
+};
+
+function catchError(error) {
+   console.error(error);
+}
+>>>>>>> Stashed changes
 
 refs.searchForm.addEventListener('submit', throttle(onSubmitBtnClick, 500));
 
