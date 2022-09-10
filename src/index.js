@@ -7,6 +7,8 @@ import listMovies from './js/createListMovies';
 import toggleModal from './js/goit-modal';
 import openModal from './js/authorization-modal';
 import closeModal from './js/authorization-modal';
+import './js/modal-form';
+
 
 import {showLoader, hideLoader} from './js/loader';
 
