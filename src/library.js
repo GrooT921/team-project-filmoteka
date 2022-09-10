@@ -1,4 +1,5 @@
-import { libBtnsHandler, renderWatchedFilms } from './js/utils/libBtnSwitch';
+import { Film } from './js/film/film';
+import { libBtnsHandler } from './js/utils/libBtnSwitch';
 import { openModal, closeModal } from './js/authorization-modal';
 
 const libRefs = {
@@ -6,6 +7,6 @@ const libRefs = {
 };
 
 window.addEventListener('load', () => {
-  renderWatchedFilms('watched', 'просмотренных');
+  Film.renderWatchedFilms('watchedFilms', 'просмотренных');
   libRefs.libBtnsContainer.addEventListener('click', libBtnsHandler);
 });
