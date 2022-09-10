@@ -8,7 +8,6 @@ export class Film {
   }
   static removeWithoutAuth(filmId, folder) {
     const index = findFilmById(filmId, folder);
-    console.log(index);
     const filmsList = getFilmsFromLocalStorage(folder);
     filmsList.splice(index, 1);
     localStorage.setItem(`${folder}`, JSON.stringify(filmsList));

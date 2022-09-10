@@ -20,7 +20,6 @@ export function actionQueue(evt, filmData) {
     evt.target.textContent = 'Remove from queue';
     evt.target.dataset.action = 'remove';
   } else {
-    console.log(filmData.id);
     Film.removeWithoutAuth(filmData.id, 'queueFilms');
     evt.target.textContent = 'Add to queue';
     evt.target.dataset.action = 'add';

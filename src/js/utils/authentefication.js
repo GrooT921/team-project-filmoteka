@@ -78,7 +78,7 @@ function logIn(userData) {
   addEventListenerOnExitBtn();
 }
 
-function renderCurrentUserName() {
+export function renderCurrentUserName() {
   const userNikName = JSON.parse(sessionStorage.getItem('userData')).userName;
   const navUserName = document.getElementById('user-name-contain');
 
