@@ -1,30 +1,46 @@
 import { students } from './students-list';
 
 const refs = {
-openModalBtn: document.querySelector("[data-modal-open]"),
-closeModalBtn: document.querySelector("[data-modal-close]"),
+openModalBtn: document.querySelector(".footer__link[data-modal-open]"),
+closeModalBtn: document.querySelector(".button-goit-close[data-modal-close]"),
 modal: document.querySelector("[data-modal]"),
-students: document.querySelector(".students-students__list"),
+students: document.querySelector(".container-students__list"),
 };
 
 refs.openModalBtn.addEventListener("click", toggleModal);
 refs.closeModalBtn.addEventListener("click", toggleModal);
 
-export function  toggleModal(e) {
-    refs.modal.classList.toggle("is-hidden");
-    console.log('Working');
+export default function toggleModal(e) {
+    e.preventDefault();
+    refs.modal.classList.toggle("is-goit-hidden");
+    console.log(refs.openModalBtn);
+            // console.log(`${this.student.image}`);
+
     markupStudents(students);
+    console.log('Working after');
+    if (refs.modal.classList.contains("is-goit-hidden")) { 
+        resetMarkup();
+        console.log('Working  if hidden');
+    }
 }
 
+
+
+
 function markupStudents(students) { 
+    console.log(students[2].name);
+
     refs.students.insertAdjacentHTML('beforeend', students.map(student => { 
         return `<li class="student">
-                    <img class="student__image" src="${students.image}" alt="${student.name} фото" width="270" />
+                    <img class="student__image" src="${student.image}" alt="${student.name} фото" width="70" />
                     <div class="student__description">
-                        <h3 lang="ru" class="student__name">${student.name}</h3>
-                        <p lang="en" class="student__part">${student.part}</p>
-                        <p lang="en" class="student__participation">${student.participation}</p>
+                        <h3 lang="uk" class="student__name">${student.name.toUpperCase()}</h3>
+                        <p lang="en" class="student__role">${student.role}</p>
                     </div>
                 </li>`
-                }).join(''));
+    }).join(''));
+
+}
+function resetMarkup() { 
+    refs.students.innerHTML = '';
 }
