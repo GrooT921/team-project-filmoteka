@@ -89,7 +89,8 @@ function onSubmitBtnClick(e) {
       refs.alert.classList.remove('visually-hidden');
       refs.searchForm.reset();
     };
-  }).then(hideLoader);
+  }).then(catchError)
+    .then(hideLoader)
 };
 
 function catchError(error) {
