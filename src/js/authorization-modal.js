@@ -30,16 +30,18 @@ export function openModal(e) {
   
   refs.modal.classList.remove('hidden');
 
-  // document.body.style.position = 'fixed';
-  // document.body.style.top = `-${window.scrollY}px`;
+  document.body.classList.add('overflow-hidden');
+
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${window.scrollY}px`;
 }
 
 export function closeModal(e) {
   refs.modal.classList.add('hidden');
-//   const scrollY = document.body.style.top;
-// document.body.style.position = '';
-// document.body.style.top = '';
-// window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  const scrollY = document.body.style.top;
+document.body.style.position = '';
+document.body.style.top = '';
+window.scrollTo(0, parseInt(scrollY || '0') * -1);
 
 }
 
