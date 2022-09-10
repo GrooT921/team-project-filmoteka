@@ -8,8 +8,7 @@ function listMovies(list) {
     cardCollection.innerHTML = '';
     const movies = list
       .map(movie => {
-        const img =
-          'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/no-images-found.png';
+        const img = require('../images/no-images-found.png');
         const genresName = movie.genre_ids
           .map(genreId => genres.filter(el => el.id === genreId)[0])
           .map(el => el.name);
@@ -17,7 +16,9 @@ function listMovies(list) {
           genresName.length > 2
             ? genresName.slice(0, 2).join(', ') + ' ...'
             : genresName.join(', ');
-        const year = new Date(movie.release_date).getFullYear();
+        const year = movie.release_date
+          ? new Date(movie.release_date).getFullYear()
+          : '0000';
         return `<li class="card__film" >
         <div class="thumb" data-id='${movie.id}'>
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${
@@ -26,7 +27,9 @@ function listMovies(list) {
         </div>
         <h2 class="card__title">${movie.title}</h2>
         <p class="card__text">
-          <span class="genres">${genresNameDotted}</span> | <span class="release">${year}</span> <span
+          <span class="genres">${
+            genresNameDotted.length > 0 ? genresNameDotted : 'No genres'
+          }</span> | <span class="release">${year}</span> <span
             class="card__vote_average">${movie.vote_average.toFixed(1)}</span>
         </p>
       </li>`;
