@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     form: document.querySelector('.form'),
     card: document.querySelector('.list'),
   };
-  console.log(refs.card);
 
   function getCurrentGenres(genreList) {
     return genreList

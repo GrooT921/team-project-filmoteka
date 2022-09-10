@@ -89,13 +89,8 @@ function onSubmitBtnClick(e) {
       refs.alert.classList.remove('visually-hidden');
       refs.searchForm.reset();
     };
-  }).then(catchError)
-    .then(hideLoader)
+  }).then(hideLoader)
 };
-
-function catchError(error) {
-   console.error(error);
-}
 
 import axios from 'axios';
 
