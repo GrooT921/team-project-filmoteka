@@ -62,7 +62,6 @@ export function autentification(evt) {
         // Notiflix.Notify.success(
         //   `You Successfuly enter in your accaunt  ${userName.value} !`
         // );
-        // Film.renderCurrentUserFilmList(userName.value);
         Film.setCurrentUserFilmList(userName.value);
         setTimeout(() => {
           document
@@ -70,7 +69,8 @@ export function autentification(evt) {
             .classList.contains('active__btn')
             ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
             : Film.renderWatchedFilms('queueFilms', 'запланированных');
-        }, 50);
+        }, 100);
+
         logIn(snapshot.val());
       }
     } else {
