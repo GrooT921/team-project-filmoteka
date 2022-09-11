@@ -38,9 +38,15 @@ getTrending(API_KEY, 'movie', 'week', refs.currentPage)
 // Отображение аккаунта
 
 window.addEventListener('load', () => {
-  if (sessionStorage.getItem('userData') !== null) {
+  if (localStorage.getItem('userData') !== null) {
     renderCurrentUserName();
-    addEventListenerOnExitBtn();
+    document.getElementById('sign-out-btn').addEventListener('click', () => {
+      localStorage.removeItem('userData');
+      localStorage.removeItem('watchedFilms');
+      localStorage.removeItem('queueFilms');
+      document.querySelector('.modal-open-btn').classList.remove('hidden');
+      document.getElementById('user-name-contain').innerHTML = '';
+    });
   }
 });
 

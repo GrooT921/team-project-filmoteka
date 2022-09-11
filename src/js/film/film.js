@@ -48,7 +48,7 @@ export class Film {
     const list = films.length
       ? films.map(createOneFilmCard).join('')
       : `<p style="text-align: center;">У вас ещё нету ${rewWords} фильмов :(</p>`;
-    document.querySelector('.card__colection').innerHTML = list;
+    document.querySelector('.library-list').innerHTML = list;
   }
 
   static isFilmExistInWatched(filmId) {

@@ -81,7 +81,7 @@ export function autentification(evt) {
 }
 
 function logIn(userData) {
-  sessionStorage.setItem('userData', JSON.stringify(userData));
+  localStorage.setItem('userData', JSON.stringify(userData));
   document.querySelector('.close-btn').click();
 
   renderCurrentUserName();
@@ -89,7 +89,7 @@ function logIn(userData) {
 }
 
 export function renderCurrentUserName() {
-  const userNikName = JSON.parse(sessionStorage.getItem('userData')).userName;
+  const userNikName = JSON.parse(localStorage.getItem('userData')).userName;
   const navUserName = document.getElementById('user-name-contain');
 
   const html = `
