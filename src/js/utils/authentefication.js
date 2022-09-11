@@ -95,6 +95,7 @@ export function renderCurrentUserName() {
   const html = `
             <button
             type="button"
+            class="sign__out-btn"
             id="sign-out-btn"
           >Sign Out
           </button>
