@@ -4,27 +4,41 @@ const refs = {
 openModalBtn: document.querySelector(".footer__link[data-modal-open]"),
 closeModalBtn: document.querySelector(".button-goit-close[data-modal-close]"),
 modal: document.querySelector("[data-modal]"),
-    students: document.querySelector(".container-students__list"),
+students: document.querySelector(".container-students__list"),
 scrollToTopBtn: document.querySelector("#scroll-to-top"),
+goitBackdrop: document.querySelector(".goit-backdrop"),
+bodyForGoit: document.body,
+goitModalWrapper: document.querySelector(".goit-wrapper"),
 };
 
 refs.openModalBtn.addEventListener("click", toggleModal);
 refs.closeModalBtn.addEventListener("click", toggleModal);
+refs.goitBackdrop.addEventListener("click", closeGoitModal);
+refs.openModalBtn.addEventListener("click", toggleModal);
 
-export default function toggleModal(e) {
+export  function toggleModal(e) {
     e.preventDefault();
     refs.modal.classList.toggle("is-goit-hidden");
     markupStudents(students);
-    if (refs.modal.classList.contains("is-goit-hidden")) {
+    if (refs.modal.classList.contains("is-goit-hidden") || refs.modal.classList.contains("goit-modal-open")) {
         resetMarkup();
         refs.scrollToTopBtn.classList.remove("visually-hidden");
+        refs.bodyForGoit.classList.remove("goit-modal-open");
     } else if (!refs.modal.classList.contains("is-goit-hidden")) { 
         refs.scrollToTopBtn.classList.add("visually-hidden");
+        refs.bodyForGoit.classList.add("goit-modal-open");
     }
 }
 
+export function closeGoitModal(e) {
+    if (refs.goitBackdrop === e.target) {
+        resetMarkup();
+        refs.modal.classList.add("is-goit-hidden");
+        refs.bodyForGoit.classList.remove("goit-modal-open");
+        refs.scrollToTopBtn.classList.remove("visually-hidden");
+    }
 
-
+}
 
 function markupStudents(students) { 
     refs.students.insertAdjacentHTML('beforeend', students.map(student => { 
@@ -67,3 +81,4 @@ function markupStudents(students) {
 function resetMarkup() { 
     refs.students.innerHTML = '';
 }
+
