@@ -185,17 +185,20 @@ height: 40px;
     background: none;
     border: none;
 
-    &:hover,
-    &:focus {
-     .modal-open-btn__icon {
-fill:#fff
-    }
-    }
-
 }
-
 .modal-open-btn__icon {
     width: 24px;
     height: 24px;
-    fill:#FF001B;
+    fill: #fff;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: #ff6b01
+    }
 }
+// .modal-open-btn__icon {
+//     width: 24px;
+//     height: 24px;
+//     fill:#FF001B;
+// }
