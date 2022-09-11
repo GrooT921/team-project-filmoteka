@@ -12,9 +12,9 @@ const libRefs = {
 
 window.addEventListener('load', () => {
   libRefs.libBtnsContainer.addEventListener('click', libBtnsHandler);
-  if (sessionStorage.getItem('userData') !== null) {
+  if (localStorage.getItem('userData') !== null) {
     Film.setCurrentUserFilmList(
-      JSON.parse(sessionStorage.getItem('userData')).userName
+      JSON.parse(localStorage.getItem('userData')).userName
     );
     document.querySelector('.library__btn').classList.contains('active__btn')
       ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')

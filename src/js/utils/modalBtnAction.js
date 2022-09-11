@@ -3,9 +3,9 @@ import { Film } from '../film/film';
 export function actionWatch(evt, filmData) {
   //   console.log(evt.target.dataset.action);
   if (evt.target.dataset.action === 'add') {
-    if (sessionStorage.getItem('userData') !== null) {
+    if (localStorage.getItem('userData') !== null) {
       const currentUserName = JSON.parse(
-        sessionStorage.getItem('userData')
+        localStorage.getItem('userData')
       ).userName;
       Film.createWithtAuth(filmData, 'watchedFilms', currentUserName);
       evt.target.textContent = 'Remove from watched';
@@ -16,9 +16,9 @@ export function actionWatch(evt, filmData) {
       evt.target.dataset.action = 'remove';
     }
   } else {
-    if (sessionStorage.getItem('userData') !== null) {
+    if (localStorage.getItem('userData') !== null) {
       const currentUserName = JSON.parse(
-        sessionStorage.getItem('userData')
+        localStorage.getItem('userData')
       ).userName;
       Film.removeWithAuth(filmData.id, 'watchedFilms', currentUserName);
       Film.renderWatchedFilms('watchedFilms', 'просмотренных');
@@ -36,9 +36,9 @@ export function actionWatch(evt, filmData) {
 
 export function actionQueue(evt, filmData) {
   if (evt.target.dataset.action === 'add') {
-    if (sessionStorage.getItem('userData') !== null) {
+    if (localStorage.getItem('userData') !== null) {
       const currentUserName = JSON.parse(
-        sessionStorage.getItem('userData')
+        localStorage.getItem('userData')
       ).userName;
       Film.createWithtAuth(filmData, 'queueFilms', currentUserName);
       evt.target.textContent = 'Remove from queue';
@@ -49,9 +49,9 @@ export function actionQueue(evt, filmData) {
       evt.target.dataset.action = 'remove';
     }
   } else {
-    if (sessionStorage.getItem('userData') !== null) {
+    if (localStorage.getItem('userData') !== null) {
       const currentUserName = JSON.parse(
-        sessionStorage.getItem('userData')
+        localStorage.getItem('userData')
       ).userName;
       Film.removeWithAuth(filmData.id, 'queueFilms', currentUserName);
       Film.renderWatchedFilms('queueFilms', 'запланированных');
