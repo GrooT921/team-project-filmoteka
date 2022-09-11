@@ -16,29 +16,25 @@
     left: 50%;
     top: 50%;
     padding: 20px;
+    width: 280px;
 
     transform: translate(-50%, -50%) scale(0.5);
 
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
-
-    @media screen and (max-width: 319px) {
-        width: 280px;
-    }
-
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-        width: 640px;
+    @media screen and (max-width: 767px) {
+        width: 540px;
     }
 
     @media screen  and (min-width: 768px) and (max-width: 1279px) {
-        width: 704px;
+        width: 1260px;
     }
 
 
     @media screen and (min-width: 1280px) {
-        width: 1216px;
+        width: 2280px;
     }
 }
 
@@ -51,100 +47,116 @@
     transform: translate(-50%, -50%) scale(0.5);
 }
 
-
-
 .container-students {
     // border: solid 1px green;
     padding: 16px 0;
-    margin: auto;
+    // margin: auto;
     text-align: center;
-    // width: 240px;
+    width: 240px;
 
-    @media screen and (min-width: 768px) {
-        max-width: 704px;
-        padding: 0 32px;
-        margin-bottom: 60px;
+    @media screen and (max-width: 767px) {
+            width: 508px;
+        }
+    
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        width: 1228px;
     }
 
+
     @media screen and (min-width: 1280px) {
-        max-width: 1216px;
+        width: 2248px;
     }
 }
 
 .container-students__list {
 
-    @media screen and (min-width: 320px) {
-            margin-top: -32px;
-            margin-right: -32px;
-            display: flex;
-            flex-wrap: wrap;
-        }
+    display: flex;
+    flex-wrap: wrap;
     
-        // @media screen and (min-width: 1280px) {
-        //     display: flex;
-        // }
-   
-    // border: solid 1px blue;
+    @media screen and (max-width: 767px) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 0 69px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        margin-right: -45px;
+            padding: 0 20px;
+        }
+    @media screen and (min-width: 1280px) {
+        margin-right: -150px;
+            padding: 0 150px;
+    }
+ 
 }
 
 .student {
-    
-    width: 162px;
-    height: 213px;
-    background: #ffffff;
+   
+    background: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 10px;
+    overflow: hidden;
 
-    @media screen and (max-width: 319px) {
-        &:not(:last-child) {
-            margin-bottom: 30px;
-        }
+    @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 60px;
+            }
     }
 
-    @media screen and (min-width: 320px) and (max-width: 1279px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+
         &:not(:nth-child(3n+3)) {
-                margin-right: 32px;
+                margin-right: 40px;
             }
-            &:nth-child(-n+3) {
-                margin-top: 32px;
-                }
-            &:not(:nth-last-child(-n+3)) {
+        &:not(:nth-last-child(-n+3)) {
                 
-                margin-bottom: 32px;
+                margin-bottom: 40px;
             }
     
-        flex-basis: calc((100% - 32px * 3) / 3);
+        flex-basis: calc((100% - 45px * 3) / 3)
     }
 
     @media screen and (min-width: 1280px) {
-        &:not(:nth-child(6n+6)) {
-                margin-right: 30px;
-            }
-        &:nth-child(-n+6) {
-            margin-top: 30px;
-            margin-bottom: 30px;
+        &:not(:nth-child(4n+4)) {
+            margin-right: 155px;
         }
-        flex-basis: calc((100% - 32px * 6) / 6);
+       
+        &:nth-child(n+5) {
+            margin-top: 80px;
+        }
+        flex-basis: calc((100% - 155px * 4) / 4);
     }
 
+
+    &__card {
+        width: 370px;
+            // height: 413px;
+            display: flex;
+            flex-direction: column;
+    }
     &__image {
         // display: block;
-        // max-width: 100%;
+        width: 125%;
         // width: 100%;
         height: auto;
-        width: 162px;
+        // border: solid 2px tomato;
 
     }
 
     &__description {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        height: 180px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     &__name,
     &__role {
         font-weight: 500;
-        font-size: 12px;
+        font-size: 20px;
         line-height: 1.2;
         text-align: center;
         margin-bottom: 10px;
@@ -163,40 +175,79 @@
 .container-students__title {
     margin-bottom: 30px;
 
-    font-size: 30px;
+    font-size: 50px;
     line-height: 1.2;
     color: #FF6B08;
 
     @media screen and (min-width: 1200px) {
         margin-bottom: 50px;
-        font-size: 36px;
+        font-size: 45px;
     }
 }
 
 .button-goit-close {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    // width: 30px;
-    // height: 30px;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
     padding: 5px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    color: #FF6B08;
-    background: #000000;
-    border: 2px solid #FF6B08;
+    fill: #FF6B08;
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #FF6B08;
     border-radius: 50%;
 
-    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), border 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
-        color: #000000;
+        border-color: #ffffff;
+        fill: #ffffff;
         background: #FF6B08;
     }
 
-    // cursor: pointer;
+}
+
+
+.goit-social-links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.goit-social-link {
+    display: flex;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.goit-social-link__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 2px rgba(0, 0, 0, 0.8);
+
+    color: rgba(0, 0, 0, 0.8);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: #FF6B08;
+        color: #ffffff;
+    }
+}
+
+.goit-social-link__icon {
+    fill: currentColor;
 }

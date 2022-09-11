@@ -3,7 +3,7 @@ export const students = [
     name:
       'Семенов Дмитро',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/semenov-dmitro-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/semenov-dmitro-opt.jpg',
     role: 'Тимлид',
     participation: 'Делал то-то.....',
   },
@@ -11,7 +11,7 @@ export const students = [
     name:
       'Тонковид Ігор',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/tonkovid-igor-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/tonkovid-igor-opt.jpg',
     role: 'Скрам-мастер',
     participation: 'Делал то-то.....',
   },
@@ -19,7 +19,7 @@ export const students = [
     name:
       'Толстіков Олександр',
     image:
-    'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/tolstikov-oleksandr-opt.jpg',
+    'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/tolstikov-oleksandr-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -27,7 +27,7 @@ export const students = [
     name:
       'Салівон Оксана',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/salivon-oksana-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/salivon-oksana-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -35,7 +35,7 @@ export const students = [
     name:
       'Татаренко Олександр',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/tatarenko-olexandr-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/tatarenko-olexandr-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -43,7 +43,7 @@ export const students = [
     name:
       'Стариковська Марина',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/starikivska-marina-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/starikivska-marina-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -51,7 +51,7 @@ export const students = [
     name:
       'Величко Данило',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/danya-velichko-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/danya-velichko-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -59,7 +59,7 @@ export const students = [
     name:
       'Лужна Христина',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/luzhna-hristina-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/luzhna-hristina-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -67,7 +67,7 @@ export const students = [
     name:
       'Петро Сапронов',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/petro-sapronov-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/petro-sapronov-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -75,7 +75,7 @@ export const students = [
     name:
       'Гринюк Богдан',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/griniuk-bogdan-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/griniuk-bogdan-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -83,7 +83,7 @@ export const students = [
     name:
       'Чорна Надія',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/chorna-nadiya-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/chorna-nadiya-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
@@ -91,7 +91,7 @@ export const students = [
     name:
       'Сметюк Олена',
     image:
-      'https://raw.githubusercontent.com/Elena-Sea/goit-markup-hw-08/main/images/goit-students/smetiuk-olena-opt.jpg',
+      'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/smetiuk-olena-opt.jpg',
     role: 'Project part',
     participation: 'Делал то-то.....',
   },
