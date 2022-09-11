@@ -6,6 +6,8 @@ import {
   addEventListenerOnExitBtn,
 } from './js/utils/authentefication';
 import './js/modal-form';
+import scrollToTop from './js/utils/scrollToTop';
+
 const libRefs = {
   libBtnsContainer: document.querySelector('.library__btn-list'),
 };
@@ -25,3 +27,5 @@ window.addEventListener('load', () => {
     Film.renderWatchedFilms('watchedFilms', 'просмотренных');
   }
 });
+
+scrollToTop();
