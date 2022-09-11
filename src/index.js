@@ -3,7 +3,7 @@ import API_KEY from './js/apiKey';
 import getTrending from './js/fetches/getTrending';
 import getSearch from './js/fetches/getSearch';
 import listMovies from './js/createListMovies';
-import toggleModal from './js/goit-modal';
+import { toggleModal, closeGoitModal } from './js/goit-modal';
 import openModal from './js/authorization-modal';
 import closeModal from './js/authorization-modal';
 import './js/modal-form';
