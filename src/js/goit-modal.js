@@ -42,6 +42,7 @@ export function closeGoitModal(e) {
 
 function markupStudents(students) { 
     refs.students.insertAdjacentHTML('beforeend', students.map(student => { 
+        const iconSrc = require('../images/goit-students/icons.svg');
         return `<li class="student">
                     <div class="student__card">
                         <img class="student__image" src="${student.image}" alt="${student.name} фото" width="330" />
@@ -52,14 +53,14 @@ function markupStudents(students) {
                                 <li class="goit-social-link">
                                     <a href="#" class="goit-social-link__link">
                                     <svg class="goit-social-link__icon" width="32" height="32">
-                                        <use href="./images/goit-students/icons.svg#icon-instagram"></use>
+                                        <use href="${iconSrc}#icon-instagram"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="goit-social-link">
                                     <a href="#" class="goit-social-link__link">
                                     <svg class="goit-social-link__icon" width="32" height="32">
-                                        <use href="./images/goit-students/icons.svg#icon-close-black-2"></use>
+                                        <use href="${iconSrc}#icon-github"></use>
                                     </svg>
                                     </a>
                                 </li>
@@ -67,7 +68,7 @@ function markupStudents(students) {
                                 <li class="goit-social-link">
                                     <a href="#" class="goit-social-link__link">
                                     <svg class="goit-social-link__icon" width="32" height="32">
-                                        <use href="./images/goit-students/icons.svg#icon-linkedin"></use>
+                                        <use href="${iconSrc}#icon-linkedin"></use>
                                     </svg>
                                     </a>
                                 </li>
