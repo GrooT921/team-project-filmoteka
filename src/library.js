@@ -8,7 +8,7 @@ import {
 } from './js/utils/authentefication';
 import './js/modal-form';
 import scrollToTop from './js/utils/scrollToTop';
-
+import './js/theme-switcher';
 const libRefs = {
   libBtnsContainer: document.querySelector('.library__btn-list'),
 };
@@ -32,4 +32,3 @@ window.addEventListener('load', () => {
   hideLoader();
   scrollToTop();
 });
-
