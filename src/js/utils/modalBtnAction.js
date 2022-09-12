@@ -21,13 +21,13 @@ export function actionWatch(evt, filmData) {
         localStorage.getItem('userData')
       ).userName;
       Film.removeWithAuth(filmData.id, 'watchedFilms', currentUserName);
-      Film.renderWatchedFilms('watchedFilms', 'просмотренных');
+      Film.renderWatchedFilms('watchedFilms', 'watched');
 
       evt.target.textContent = 'Add to queue';
       evt.target.dataset.action = 'add';
     } else {
       Film.removeWithoutAuth(filmData.id, 'watchedFilms');
-      Film.renderWatchedFilms('watchedFilms', 'просмотренных');
+      Film.renderWatchedFilms('watchedFilms', 'watched');
       evt.target.textContent = 'Add to watched';
       evt.target.dataset.action = 'add';
     }
@@ -54,12 +54,12 @@ export function actionQueue(evt, filmData) {
         localStorage.getItem('userData')
       ).userName;
       Film.removeWithAuth(filmData.id, 'queueFilms', currentUserName);
-      Film.renderWatchedFilms('queueFilms', 'запланированных');
+      Film.renderWatchedFilms('queueFilms', 'scheduled');
       evt.target.textContent = 'Add to queue';
       evt.target.dataset.action = 'add';
     } else {
       Film.removeWithoutAuth(filmData.id, 'queueFilms');
-      Film.renderWatchedFilms('queueFilms', 'запланированных');
+      Film.renderWatchedFilms('queueFilms', 'scheduled');
       evt.target.textContent = 'Add to queue';
       evt.target.dataset.action = 'add';
     }

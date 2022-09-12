@@ -83,6 +83,7 @@ const pagination = new Pagination(container, options);
 
 pagination.on('beforeMove', e => {
   refs.currentPage = e.page;
+  showLoader();
   getTrending(API_KEY, 'movie', 'week', refs.currentPage)
     .then(data => {
       listMovies(data.results);
@@ -103,6 +104,7 @@ function onSubmitBtnClick(e) {
   e.preventDefault();
   const keyWord = refs.keyWord;
   console.log(keyWord);
+  showLoader()
   getSearch(keyWord, API_KEY, refs.currentPage)
     .then(data => {
       if (data.results.length !== 0) {

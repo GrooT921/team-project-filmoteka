@@ -47,7 +47,16 @@ export class Film {
     console.log(films.length);
     const list = films.length
       ? films.map(createOneFilmCard).join('')
-      : `<p style="text-align: center;">У вас ещё нету ${rewWords} фильмов :(</p>`;
+      // : `<p style="text-align: center;">You don't have any ${rewWords} movies yet :(</p>`;
+      : `<li class="card__film card__film--no-active">
+          <div class="thumb">
+            <img src="./images/sad-face.png" alt="sad-face" />            
+          </div>
+  
+          <p class="card__text">
+            You don't have any ${rewWords} movies yet      
+          </p>
+        </li>`;
     document.querySelector('.library-list').innerHTML = list;
   }
 

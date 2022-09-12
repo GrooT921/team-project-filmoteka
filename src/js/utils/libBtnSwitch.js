@@ -13,14 +13,14 @@ export function libBtnsHandler(event) {
   ) {
     lib_refs.watchedBtn.classList.add('active__btn');
     lib_refs.queueBtn.classList.remove('active__btn');
-    Film.renderWatchedFilms('watchedFilms', 'просмотренных');
+    Film.renderWatchedFilms('watchedFilms', 'watched');
   } else if (
     event.target.nodeName === 'BUTTON' &&
     event.target.dataset.library === 'queue'
   ) {
     lib_refs.watchedBtn.classList.remove('active__btn');
     lib_refs.queueBtn.classList.add('active__btn');
-    Film.renderWatchedFilms('queueFilms', 'запланированных');
+    Film.renderWatchedFilms('queueFilms', 'scheduled');
   }
 }
 

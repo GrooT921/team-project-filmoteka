@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeModal();
     // document.querySelector('.library__btn').classList.contains('active__btn')
     //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-    //   : Film.renderWatchedFilms('queueFilms', 'запланированных');
+    //   : Film.renderWatchedFilms('queueFilms', '');
   });
   document.addEventListener('click', e => {
     if (e.target.classList.contains('modal_overlay')) {

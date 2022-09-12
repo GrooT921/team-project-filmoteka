@@ -1,4 +1,5 @@
 import { Film } from './js/film/film';
+import { showLoader, hideLoader } from './js/loader';
 import { libBtnsHandler } from './js/utils/libBtnSwitch';
 import { openModal, closeModal } from './js/authorization-modal';
 import {
@@ -12,6 +13,8 @@ const libRefs = {
   libBtnsContainer: document.querySelector('.library__btn-list'),
 };
 
+showLoader();
+
 window.addEventListener('load', () => {
   libRefs.libBtnsContainer.addEventListener('click', libBtnsHandler);
   if (localStorage.getItem('userData') !== null) {
@@ -19,13 +22,14 @@ window.addEventListener('load', () => {
       JSON.parse(localStorage.getItem('userData')).userName
     );
     document.querySelector('.library__btn').classList.contains('active__btn')
-      ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-      : Film.renderWatchedFilms('queueFilms', 'запланированных');
+      ? Film.renderWatchedFilms('watchedFilms', 'watched')
+      : Film.renderWatchedFilms('queueFilms', 'scheduled');
     renderCurrentUserName();
     addEventListenerOnExitBtn();
   } else {
-    Film.renderWatchedFilms('watchedFilms', 'просмотренных');
+    Film.renderWatchedFilms('watchedFilms', 'watched');
   }
+  hideLoader();
+  scrollToTop();
 });
 
-scrollToTop();

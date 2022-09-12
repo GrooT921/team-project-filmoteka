@@ -67,8 +67,8 @@ export function autentification(evt) {
           document
             .querySelector('.library__btn')
             .classList.contains('active__btn')
-            ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-            : Film.renderWatchedFilms('queueFilms', 'запланированных');
+            ? Film.renderWatchedFilms('watchedFilms', 'watched')
+            : Film.renderWatchedFilms('queueFilms', 'scheduled');
         }, 100);
 
         logIn(snapshot.val());

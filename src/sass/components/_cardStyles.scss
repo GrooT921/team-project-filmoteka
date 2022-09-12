@@ -14,8 +14,7 @@
   }
 }
 
-.card__colection {
-  
+.card__colection {  
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -46,6 +45,19 @@
 .card__film:hover,
 .card__film:focus {
   transform: scale(1.03);
+}
+
+.card__film--no-active {
+  cursor: default;
+}
+
+.card__film--no-active:hover,
+.card__film--no-active:focus {
+  transform: none;
+}
+
+.card__film--no-active .card__text {
+  justify-content: center;
 }
 
 .card__film img {
