@@ -1,6 +1,7 @@
 import { Film } from '../film/film';
 
 export function actionWatch(evt, filmData) {
+  evt.target.classList.add('remove-watched-btn');
   //   console.log(evt.target.dataset.action);
   if (evt.target.dataset.action === 'add') {
     if (localStorage.getItem('userData') !== null) {
@@ -35,6 +36,7 @@ export function actionWatch(evt, filmData) {
 }
 
 export function actionQueue(evt, filmData) {
+  evt.target.classList.add('remove-queue-btn');
   if (evt.target.dataset.action === 'add') {
     if (localStorage.getItem('userData') !== null) {
       const currentUserName = JSON.parse(
