@@ -58,6 +58,11 @@
 
 .card__film--no-active .card__text {
   justify-content: center;
+  text-align: center;
+  @media screen and (min-width: 1280px) {
+      font-size: 18px;
+      
+    }
 }
 
 .card__film img {
@@ -120,4 +125,29 @@
   color: #ffffff;
   background-color: #ff6b08;
   border-radius: 5px;
+}
+
+.no-films-found { 
+  margin-top: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 20px;
+  }
+  
+  @media screen and (min-width: 1280px) {
+    margin-top: 30px;
+  }
+}
+
+.no-films-found img {
+    margin: 0 auto;      
+    width: 276px;    
+  
+    @media screen and (min-width: 768px) {
+      width: 336px;      
+    }
+  
+    @media screen and (min-width: 1280px) {
+      width: 395px;      
+    }
 }
