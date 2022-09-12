@@ -184,6 +184,9 @@
 
     &__role {
         color: #FF6B08;
+        padding-left: 20px;
+            padding-right: 20px;
+
     }
 
  transform: scale(1);
@@ -235,6 +238,10 @@
         background: #FF6B08;
     }
 
+         @media screen and (max-width: 767px) {
+            top: 15px;
+                right: 15px;
+         }
 }
 
 
