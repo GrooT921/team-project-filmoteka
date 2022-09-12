@@ -128,3 +128,13 @@
   background-color: #ff6b08;
   border-radius: 5px;
 }
+.alert__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.alert__img {
+  border-radius: 5%;
+}
