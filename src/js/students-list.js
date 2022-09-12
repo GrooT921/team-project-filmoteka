@@ -4,194 +4,83 @@ export const students = [
       'Семенов Дмитро',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/semenov-dmitro-opt.jpg',
-    role: 'Тимлид',
-    participation: 'Делал то-то.....',
+    role: 'Тімлід',
   },
   {
     name:
       'Тонковид Ігор',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/tonkovid-igor-opt.jpg',
-    role: 'Скрам-мастер',
-    participation: 'Делал то-то.....',
+    role: 'Скрам-майстер, карточка фільму, контейнери “main” та "My Library"',
   },
 {
     name:
       'Толстіков Олександр',
     image:
     'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/tolstikov-oleksandr-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Хедер, події кнопок хедеру',
   },
 {
     name:
       'Салівон Оксана',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/salivon-oksana-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Фетчінг фільмів, заглушка на карточку фільма',
   },
 {
     name:
       'Татаренко Олександр',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/tatarenko-olexandr-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Пагінація',
   },
 {
     name:
       'Стариковська Марина',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/starikivska-marina-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Пошук фільмів за ключовим словом',
   },
 {
     name:
       'Величко Данило',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/danya-velichko-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Реєстрація, події кнопок "Watched" та "Queue"',
   },
 {
     name:
       'Лужна Христина',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/luzhna-hristina-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Модалка обраного фільму',
   },
 {
     name:
       'Петро Сапронов',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/petro-sapronov-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Реалізація кнопок "Add to watched" та "Add to queue"',
   },
 {
     name:
       'Гринюк Богдан',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/griniuk-bogdan-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Підключення Loader, анімація модалок',
   },
 {
     name:
       'Чорна Надія',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/chorna-nadiya-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Пагінація',
   },
 {
     name:
       'Сметюк Олена',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/smetiuk-olena-opt.jpg',
-    role: 'Project part',
-    participation: 'Делал то-то.....',
+    role: 'Модалка студентів',
   },
 ];
-
-// export const students = [
-//   {
-//     name:
-//       'Семенов Дмитро',
-//     image:
-//       './images/goit-students/semenov-dmitro-opt.jpg',
-//     role: 'Тимлид',
-//     participation: 'Делал то-то.....',
-//   },
-//   {
-//     name:
-//       'Тонковид Ігор',
-//     image:
-//       './images/goit-students/tonkovid-igor-opt.jpg',
-//     role: 'Скрам-мастер',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Толстіков Олександр',
-//     image:
-//     './images/goit-students/tolstikov-oleksandr-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Салівон Оксана',
-//     image:
-//       './images/goit-students/salivon-oksana-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Татаренко Олександр',
-//     image:
-//       './images/goit-students/tatarenko-olexandr-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Стариковська Марина',
-//     image:
-//       './images/goit-students/starikivska-marina-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Величко Данило',
-//     image:
-//       './images/goit-students/danya-velichko-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Лужна Христина',
-//     image:
-//       './images/goit-students/luzhna-hristina-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Петро Сапронов',
-//     image:
-//       './images/goit-students/petro-sapronov-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Гринюк Богдан',
-//     image:
-//       './images/goit-students/griniuk-bogdan-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Чорна Надія',
-//     image:
-//       './images/goit-students/chorna-nadiya-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// {
-//     name:
-//       'Сметюк Олена',
-//     image:
-//       './images/goit-students/smetiuk-olena-opt.jpg',
-//     role: 'Project part',
-//     participation: 'Делал то-то.....',
-//   },
-// ];

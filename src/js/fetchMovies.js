@@ -1,30 +1,28 @@
-import './js/fetchMovies'
-import './sass/index.scss';
-import {
-  renderCurrentUserName,
-  addEventListenerOnExitBtn,
-} from './js/utils/authentefication';
-import { toggleModal, closeGoitModal } from './js/goit-modal';
-import openModal from './js/authorization-modal';
-import closeModal from './js/authorization-modal';
-import './js/modal-form';
-import toggleRegisterModal from './js/authorization-modal';
+import API_KEY from './apiKey';
+import getTrending from './fetches/getTrending';
+import getSearch from './fetches/getSearch';
+import listMovies from './createListMovies';
+import Pagination from 'tui-pagination';
+import { showLoader, hideLoader } from './loader';
+import { topFunction } from './utils/scrollToTop';
+import scrollToTop from './utils/scrollToTop';
+var throttle = require('lodash.throttle');
 
-// Отображение аккаунта
+const refs = {
+  currentPage: 1,
+  keyWord: '',
+  cardCollection: document.querySelector('.card__colection'),
+  searchForm: document.querySelector('.search__form'),
+  alert: document.querySelector('.warning__message'),
+};
 
-window.addEventListener('load', () => {
-  if (localStorage.getItem('userData') !== null) {
-    renderCurrentUserName();
-    document.getElementById('sign-out-btn').addEventListener('click', () => {
-      localStorage.removeItem('userData');
-      localStorage.removeItem('watchedFilms');
-      localStorage.removeItem('queueFilms');
-      document.querySelector('.modal-open-btn').classList.remove('hidden');
-      document.getElementById('user-name-contain').innerHTML = '';
-    });
-  }
-});
-
+// Відображення популярних фільмів на головній сторінці
+getTrending(API_KEY, 'movie', 'week', refs.currentPage)
+  .then(data => {
+    listMovies(data.results);
+    pagination.reset(data.total_results);
+  })
+  .then(hideLoader);
 
 // Пагинация
 const container = document.getElementById('pagination-container');
@@ -57,10 +55,8 @@ const options = {
 
 const pagination = new Pagination(container, options);
 
-
 pagination.on('beforeMove', e => {
   refs.currentPage = e.page;
-  showLoader();
   getTrending(API_KEY, 'movie', 'week', refs.currentPage)
     .then(data => {
       listMovies(data.results);
@@ -68,6 +64,9 @@ pagination.on('beforeMove', e => {
     .then(topFunction)
     .then(hideLoader);
 });
+//Для поиска по слову
+const paginationSearch = new Pagination(container, options);
+
 //Поиск по слову
 refs.searchForm.addEventListener('input', throttle(onInputEnter, 500));
 
@@ -81,14 +80,22 @@ function onSubmitBtnClick(e) {
   e.preventDefault();
   const keyWord = refs.keyWord;
   console.log(keyWord);
-  showLoader();
   getSearch(keyWord, API_KEY, refs.currentPage)
     .then(data => {
       if (data.results.length !== 0) {
         refs.alert.classList.add('visually-hidden');
         listMovies(data.results);
-        pagination.reset(data.total_results);
+        paginationSearch.reset(data.total_results);
+          paginationSearch.on('beforeMove', e => {
+            refs.currentPage = e.page;
+            getSearch(keyWord, API_KEY, refs.currentPage)
+            .then(data => {
+            listMovies(data.results);
+        })
+        .then(topFunction)
+        .then(hideLoader);
         refs.searchForm.reset();
+    });
       } else {
         refs.alert.classList.remove('visually-hidden');
         refs.searchForm.reset();
@@ -98,4 +105,3 @@ function onSubmitBtnClick(e) {
 }
 
 scrollToTop();
-
