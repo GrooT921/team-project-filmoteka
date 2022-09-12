@@ -47,10 +47,8 @@ export class Film {
     console.log(films.length);
     const imgNoFilmsFound = require('../../images/sad-face.png');
 
-
     const list = films.length
-      ? films.map(createOneFilmCard).join('')
-      // : `<p style="text-align: center;">You don't have any ${rewWords} movies yet :(</p>`;
+      ? films.map(createOneFilmCard).join('')      
       : `<li class="card__film card__film--no-active">
           <div class="thump">
             <img  src="${imgNoFilmsFound}" alt="sad-face" />
