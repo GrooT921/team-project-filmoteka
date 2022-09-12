@@ -26,6 +26,7 @@
     padding-left: 32px;
   }
 }
+
 .header {
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
@@ -67,13 +68,15 @@
   }
 }
 
-// .header__container {
-//   padding: 40px 20px 44px;
+.nav__switcher-link {
+  margin-left: 18px;
+  fill: #ffffff;
+  & :hover,
+  & :focus {
+    fill:#ff6b01
+  }
 
-//   @media screen and (min-width: 768px) {
-//     padding: 40px 32px 81px;
-//   }
-// }
+}
 
 .nav__auth {
   margin-left: 24px;

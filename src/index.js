@@ -1,4 +1,4 @@
-import './js/fetchMovies'
+import './js/fetchMovies';
 import './sass/index.scss';
 import {
   renderCurrentUserName,
@@ -9,6 +9,7 @@ import openModal from './js/authorization-modal';
 import closeModal from './js/authorization-modal';
 import './js/modal-form';
 import toggleRegisterModal from './js/authorization-modal';
+import './js/theme-switcher';
 
 // Отображение аккаунта
 
