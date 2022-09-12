@@ -83,7 +83,6 @@ export class Film {
     get(child(dbRef, `UsersList/${userName}/` + 'watchedFilms')).then(
       snapshot => {
         if (snapshot.exists()) {
-          //   console.log(dbDataHandler(snapshot.val()));
           localStorage.setItem(
             'watchedFilms',
             JSON.stringify(dbDataHandler(snapshot.val()))

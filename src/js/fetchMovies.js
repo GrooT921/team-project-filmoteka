@@ -13,7 +13,7 @@ const refs = {
   keyWord: '',
   cardCollection: document.querySelector('.card__colection'),
   searchForm: document.querySelector('.search__form'),
-  alert: document.querySelector('.warning__message'),
+  alertBox: document.querySelector('.alert__container')
 };
 
 // Відображення популярних фільмів на головній сторінці
@@ -82,8 +82,14 @@ function onSubmitBtnClick(e) {
   console.log(keyWord);
   getSearch(keyWord, API_KEY, refs.currentPage)
     .then(data => {
-      if (data.results.length !== 0) {
-        refs.alert.classList.add('visually-hidden');
+      console.log(data.results);
+      if (data.results.length === 0) {
+        refs.alertBox.classList.remove('visually-hidden');
+        refs.searchForm.reset();
+        refs.cardCollection.innerHTML = '';
+        pagination.reset(0);
+      } else {
+        refs.alertBox.classList.add('visually-hidden');
         listMovies(data.results);
         paginationSearch.reset(data.total_results);
           paginationSearch.on('beforeMove', e => {
@@ -96,9 +102,6 @@ function onSubmitBtnClick(e) {
         .then(hideLoader);
         refs.searchForm.reset();
     });
-      } else {
-        refs.alert.classList.remove('visually-hidden');
-        refs.searchForm.reset();
       }
     })
     .then(hideLoader);
