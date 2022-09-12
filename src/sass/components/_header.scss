@@ -68,6 +68,8 @@
   }
 }
 
+    /* Theme-switcher */
+
 .nav__switcher-link {
   margin-left: 18px;
   fill: #ffffff;
@@ -77,6 +79,8 @@
   }
 
 }
+
+    /* Navigation */
 
 .nav__auth {
   margin-left: 24px;
@@ -181,8 +185,6 @@
 
 .search__form {
   position: relative;
-  // display: flex;
-  // justify-content: center;
 }
 
 .search__input {
@@ -235,7 +237,6 @@
 }
 
 .warning__message {
-  // position: absolute;
   margin: 16px auto 0;
   width: 280px;
   color: #FF001B;

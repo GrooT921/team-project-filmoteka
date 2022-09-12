@@ -21,8 +21,8 @@ function addDarkClassToHTML() {
       refs.darkTheme.classList.add('visually-hidden');
     } else {
       refs.html.classList.remove('dark');
-      refs.lightTheme.classList.remove('visually-hidden');
-      refs.darkTheme.classList.add('visually-hidden');
+      refs.lightTheme.classList.add('visually-hidden');
+      refs.darkTheme.classList.remove('visually-hidden');
     }
   } catch (err) {}
 }
