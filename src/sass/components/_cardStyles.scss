@@ -14,8 +14,7 @@
   }
 }
 
-.card__colection {
-  
+.card__colection {  
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -48,6 +47,24 @@
   transform: scale(1.03);
 }
 
+.card__film--no-active {
+  cursor: default;
+}
+
+.card__film--no-active:hover,
+.card__film--no-active:focus {
+  transform: none;
+}
+
+.card__film--no-active .card__text {
+  justify-content: center;
+  text-align: center;
+
+  @media screen and (min-width: 1280px) {
+      font-size: 18px;      
+  }
+}
+
 .card__film img {
   border-radius: 5px;
   margin-bottom: 10px;
@@ -61,6 +78,10 @@
     width: 395px;
     height: 574px;
   }
+}
+
+.card__film--no-active img {
+  height: auto;
 }
 .card__title,
 .card__text {
@@ -81,8 +102,7 @@
 
 .card__text {
   display: flex;
-  color: #ff6b08;
-  
+  color: #ff6b08;  
 }
 
 .genres{

@@ -45,10 +45,20 @@ export class Film {
   static renderWatchedFilms(folder, rewWords) {
     const films = getFilmsFromLocalStorage(folder);
     console.log(films.length);
+    const imgNoFilmsFound = require('../../images/sad-face.png');
+
     const list = films.length
-      ? films.map(createOneFilmCard).join('')
-      : `<p style="text-align: center;">У вас ещё нету ${rewWords} фильмов :(</p>`;
-    document.querySelector('.library-list').innerHTML = list;
+      ? films.map(createOneFilmCard).join('')      
+      : `<li class="card__film card__film--no-active">
+          <div class="thump">
+            <img  src="${imgNoFilmsFound}" alt="sad-face" />
+          </div>
+
+          <p class="card__text">
+            You don't have any ${rewWords} movies yet      
+          </p>
+        </li>`;
+    document.querySelector('.library-list').innerHTML = list;   
   }
 
   static isFilmExistInWatched(filmId) {
