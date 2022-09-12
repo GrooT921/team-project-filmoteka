@@ -32,10 +32,22 @@ button {
 }
 
 html {
+  background-color: #ffffff;
+  color: #000000;
   overflow: scroll;
   height: 100%;
   scroll-behavior: smooth;
+  transition: background-color 500ms cubic-bezier(0.175, 0.82, 0.165, 1);
 }
+
+html.dark {
+  transition: background-color 500ms cubic-bezier(0.175, 0.82, 0.165, 1);
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
 
 .visually-hidden {
   position: absolute;
