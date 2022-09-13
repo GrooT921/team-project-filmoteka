@@ -73,11 +73,12 @@
 .nav__switcher-link {
   margin-left: 18px;
   fill: #ffffff;
+  
   & :hover,
   & :focus {
+    transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
     fill:#ff6b01
   }
-
 }
 
     /* Navigation */
