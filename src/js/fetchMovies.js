@@ -13,7 +13,8 @@ const refs = {
   keyWord: '',
   cardCollection: document.querySelector('.card__colection'),
   searchForm: document.querySelector('.search__form'),
-  alertBox: document.querySelector('.alert__container')
+  alertBox: document.querySelector('.alert__container'),
+  paginationBox: document.querySelector('.tui-pagination'),
 };
 
 // Відображення популярних фільмів на головній сторінці
@@ -90,7 +91,9 @@ function onSubmitBtnClick(e) {
         refs.searchForm.reset();
         refs.cardCollection.innerHTML = '';
         pagination.reset(0);
+        refs.paginationBox.classList.add('visually-hidden');
       } else {
+        refs.paginationBox.classList.remove('visually-hidden');
         refs.alertBox.classList.add('visually-hidden');
         listMovies(data.results);
         paginationSearch.reset(data.total_results);
