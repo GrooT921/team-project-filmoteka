@@ -62,6 +62,8 @@ export function autentification(evt) {
         // Notiflix.Notify.success(
         //   `You Successfuly enter in your accaunt  ${userName.value} !`
         // );
+        localStorage.removeItem('watchedFilms');
+        localStorage.removeItem('queueFilms');
         Film.setCurrentUserFilmList(userName.value);
         setTimeout(() => {
           document
@@ -72,6 +74,8 @@ export function autentification(evt) {
         }, 100);
 
         logIn(snapshot.val());
+      } else {
+        return alert('The username or password was entered incorrectly !');
       }
     } else {
       return alert('User not exist yet !');
