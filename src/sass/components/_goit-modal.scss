@@ -16,8 +16,9 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    padding: 20px;
+    padding: 10px 10px 44px 10px;
     width: 280px;
+    // height: auto;
 
     transform: translate(-50%, -50%) scale(0.5);
 
@@ -28,17 +29,20 @@
     @media screen and (max-width: 767px) {
         width: 540px;
         top: 190%;
-        left: 49%;
+        // left: 49%;
+            // height: 100vh;
+            
     }
 
     @media screen  and (min-width: 768px) and (max-width: 1279px) {
         width: 1260px;
         top: 70%;
+        padding-bottom: 30px;
     }
 
 
     @media screen and (min-width: 1280px) {
-        width: 2280px;
+        width: 1790px;
     }
 
 }
@@ -61,9 +65,10 @@
 
 
 .container-students {
-    // border: solid 1px green;
+    display: flex;
+    flex-direction: column;
     padding: 16px 0;
-    // margin: auto;
+    margin: auto;
     text-align: center;
     width: 240px;
 
@@ -78,7 +83,7 @@
 
 
     @media screen and (min-width: 1280px) {
-        width: 2248px;
+            width: 1760px;
     }
 }
 
@@ -98,8 +103,9 @@
             padding: 0 20px;
         }
     @media screen and (min-width: 1280px) {
-        margin-right: -150px;
-            padding: 0 150px;
+        margin-right: -70px;
+            padding: 0 55px;
+            // width: 1760px;
     }
  
 }
@@ -120,7 +126,7 @@
     @media screen and (min-width: 768px) and (max-width: 1279px) {
 
         &:not(:nth-child(3n+3)) {
-                margin-right: 40px;
+                margin-right: 45px;
             }
         &:not(:nth-last-child(-n+3)) {
                 
@@ -132,13 +138,13 @@
 
     @media screen and (min-width: 1280px) {
         &:not(:nth-child(4n+4)) {
-            margin-right: 155px;
+            margin-right: 60px;
         }
        
         &:nth-child(n+5) {
-            margin-top: 80px;
+            margin-top: 50px;
         }
-        flex-basis: calc((100% - 155px * 4) / 4);
+        flex-basis: calc((100% - 60px * 4) / 4);
     }
 
 
@@ -150,7 +156,7 @@
     }
     &__image {
         // display: block;
-        width: 125%;
+        width: 100%;
         // width: 100%;
         height: auto;
         // border: solid 2px tomato;
@@ -162,9 +168,9 @@
         flex-direction: column;
         justify-content: space-around;
 
-        height: 180px;
+        height: 140px;
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
     }
 
     &__name,
@@ -185,7 +191,7 @@
     &__role {
         color: #FF6B08;
         padding-left: 20px;
-            padding-right: 20px;
+        padding-right: 20px;
 
     }
 
@@ -207,7 +213,7 @@
     color: #FF6B08;
 
     @media screen and (min-width: 1200px) {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-size: 45px;
     }
 }
@@ -238,10 +244,10 @@
         background: #FF6B08;
     }
 
-         @media screen and (max-width: 767px) {
-            top: 15px;
-                right: 15px;
-         }
+    @media screen and (max-width: 767px) {
+    top: 15px;
+    right: 15px;
+    }
 }
 
 
@@ -263,8 +269,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 
     color: rgba(0, 0, 0, 0.8);

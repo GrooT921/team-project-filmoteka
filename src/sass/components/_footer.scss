@@ -144,4 +144,13 @@
 
     background-color: #545454;
   }
+    &:hover,
+    &:focus {
+      color: #FF6B08;
+    }
+}
+
+.footer__link:hover:after,
+.footer__link:focus:after {
+  background-color: #FF6B08;
 }
