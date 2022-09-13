@@ -1,6 +1,7 @@
 import { Film } from './js/film/film';
 import { showLoader, hideLoader } from './js/loader';
 import { libBtnsHandler } from './js/utils/libBtnSwitch';
+import { toggleModal, closeGoitModal } from './js/goit-modal';
 import { openModal, closeModal } from './js/authorization-modal';
 import {
   renderCurrentUserName,
