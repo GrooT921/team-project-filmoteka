@@ -1,13 +1,5 @@
 // import { getCurrentGenres } from '../modal-form';
-import {
-  getDatabase,
-  ref,
-  set,
-  child,
-  get,
-  push,
-  remove,
-} from 'firebase/database';
+import { getDatabase, ref, set, child, get, remove } from 'firebase/database';
 
 export class Film {
   static createWithoutAuth(newFilm, folder) {
@@ -43,13 +35,13 @@ export class Film {
   }
 
   static renderWatchedFilms(folder, rewWords) {
-    const films = getFilmsFromLocalStorage(folder);
-    console.log(films.length);
-    const imgNoFilmsFound = require('../../images/sad-face.png');
+    if (document.body.dataset.page === 'lib') {
+      const films = getFilmsFromLocalStorage(folder);
+      const imgNoFilmsFound = require('../../images/sad-face.png');
 
-    const list = films.length
-      ? films.map(createOneFilmCard).join('')      
-      : `<li class="card__film card__film--no-active">
+      const list = films.length
+        ? films.map(createOneFilmCard).join('')
+        : `<li class="card__film card__film--no-active">
           <div class="thump">
             <img  src="${imgNoFilmsFound}" alt="sad-face" />
           </div>
@@ -58,7 +50,8 @@ export class Film {
             You don't have any ${rewWords} movies yet      
           </p>
         </li>`;
-    document.querySelector('.library-list').innerHTML = list;   
+      document.querySelector('.library-list').innerHTML = list;
+    }
   }
 
   static isFilmExistInWatched(filmId) {
