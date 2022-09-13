@@ -1,7 +1,7 @@
 import { students } from './students-list';
 
 const refs = {
-openModalBtn: document.querySelector(".footer__link[data-modal-open]"),
+openModalLink: document.querySelector(".footer__link[data-modal-open]"),
 closeModalBtn: document.querySelector(".button-goit-close[data-modal-close]"),
 modal: document.querySelector("[data-modal]"),
 students: document.querySelector(".container-students__list"),
@@ -11,10 +11,9 @@ bodyForGoit: document.body,
 goitModalWrapper: document.querySelector(".goit-wrapper"),
 };
 
-refs.openModalBtn.addEventListener("click", toggleModal);
+refs.openModalLink.addEventListener("click", toggleModal);
 refs.closeModalBtn.addEventListener("click", toggleModal);
 refs.goitBackdrop.addEventListener("click", closeGoitModal);
-refs.openModalBtn.addEventListener("click", toggleModal);
 
 export  function toggleModal(e) {
     e.preventDefault();
@@ -58,7 +57,7 @@ function markupStudents(students) {
                                     </a>
                                 </li>
                                 <li class="goit-social-link">
-                                    <a href="#" class="goit-social-link__link">
+                                    <a href="${student.githubLink}" class="goit-social-link__link" target="_blank" rel="noreferrer noopener">
                                     <svg class="goit-social-link__icon" width="32" height="32">
                                         <use href="${iconSrc}#icon-github"></use>
                                     </svg>
