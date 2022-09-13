@@ -84,7 +84,7 @@ export const students = [
       'Чорна Надія',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/chorna-nadiya-opt.jpg',
-    role: 'Пагінація',
+    role: 'Модалка авторизації та реєстрації',
     githubLink: 'https://github.com/nadiachorna',
   },
 {
