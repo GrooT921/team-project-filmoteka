@@ -129,8 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', modalForm);
 
-  // document.getElementById('btn-close').addEventListener('click', closeModal);
-
   document.getElementById('btn-close').addEventListener('click', () => {
     closeModal();
     scroll ()
@@ -145,17 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('btn-close').addEventListener('click', () => {
     closeModal();
-    // document.querySelector('.library__btn').classList.contains('active__btn')
-    //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-    //   : Film.renderWatchedFilms('queueFilms', '');
   });
   document.addEventListener('click', e => {
     if (e.target.classList.contains('modal_overlay')) {
       closeModal();
-      // document.querySelector('.library__btn').classList.contains('active__btn')
-      //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-      //   : Film.renderWatchedFilms('queueFilms', 'запланированных');
-
     }
   });
 
@@ -163,25 +154,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.code === 'Escape') {
       closeModal();
       scroll ()
-
-      // document.querySelector('.library__btn').classList.contains('active__btn')
-      //   ? Film.renderWatchedFilms('watchedFilms', 'просмотренных')
-      //   : Film.renderWatchedFilms('queueFilms', 'запланированных');
-
     }
   });
   
   let currentPosition = '';
   function disableScroll (){
     currentPosition = window.scrollY;
-  // refs.body.classList.add('disable-scroll')
+
   document.body.style.position = 'fixed';
   document.body.style.top = `-${currentPosition}px`
-// document.body.style.width = '100%';
+
   }
 
   function scroll (){
-    // refs.body.classList.add('disable-scroll')
     document.body.style.position = '';
     document.body.style.top = '';
     window.scrollTo({
