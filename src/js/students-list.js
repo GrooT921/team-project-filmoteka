@@ -20,7 +20,7 @@ export const students = [
       'Толстіков Олександр',
     image:
     'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/tolstikov-oleksandr-opt.jpg',
-    role: 'Хедер, події кнопок хедеру',
+    role: 'Хедер, події кнопок хедеру, футер',
     githubLink: 'https://github.com/TolstikovAlex',
   },
 {
