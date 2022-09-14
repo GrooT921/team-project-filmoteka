@@ -76,7 +76,7 @@ export const students = [
       'Гринюк Богдан',
     image:
       'https://raw.githubusercontent.com/GrooT921/team-project-filmoteka/main/src/images/goit-students/griniuk-bogdan-opt.jpg',
-    role: 'Підключення Loader, анімація модалок',
+    role: '"Loader", анімація модалок, заглушка "Library", фікс пагінації',
     githubLink: 'https://github.com/BogdanGrynjuk',
   },
 {
