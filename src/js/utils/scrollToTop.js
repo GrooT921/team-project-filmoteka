@@ -9,7 +9,7 @@ function scrollToTop() {
   function scrollFunction() {
     if (
       document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
+      document.documentElement.scrollTop > 500
     ) {
       scrollUp.style.display = 'block';
     } else {
