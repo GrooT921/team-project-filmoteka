@@ -107,7 +107,7 @@ export function renderCurrentUserName() {
             <use href="${iconSrc}#exit-icon"></use> 
           </svg>
           </button>
-          <span class="auth__text" style="color: white;">Hello ,${userNikName} !</span >
+          <span class="auth__text" style="color: white;">Hello, ${userNikName}!</span >
     `;
   navUserName.innerHTML = html;
   document.querySelector('.modal-open-btn').classList.add('hidden');
