@@ -81,22 +81,49 @@
   }
 }
 
-    /* Navigation */
+         /* Navigation */
+
+       /* Authentification */
+
 
 .nav__auth {
   margin-left: 24px;
-  @media screen and (min-width: 768px) {
-    right: 20px;
-  }
 }
 
 .nav__auth-field {
 
   position: absolute;
   right: 20px;
+
   @media screen and (min-width: 768px) {
     right: 32px;
   }
+}
+
+.sign__out-btn {
+  position: absolute;
+  bottom: 32px;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  height: 14px;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #ff6b01;
+  }
+}
+
+.auth__text {
+  display: flex;
+  width: 202px;
 }
 
 .nav {

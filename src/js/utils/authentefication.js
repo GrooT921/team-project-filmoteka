@@ -93,6 +93,7 @@ function logIn(userData) {
 }
 
 export function renderCurrentUserName() {
+  const iconSrc = require('../../images/svg-sprite.svg');
   const userNikName = JSON.parse(localStorage.getItem('userData')).userName;
   const navUserName = document.getElementById('user-name-contain');
 
@@ -101,9 +102,12 @@ export function renderCurrentUserName() {
             type="button"
             class="sign__out-btn"
             id="sign-out-btn"
-          >Sign Out
+          >
+          <svg class="modal-open-btn__icon">
+            <use href="${iconSrc}#exit-icon"></use> 
+          </svg>
           </button>
-          <span style="color: white;">Hello ,${userNikName} !</span >
+          <span class="auth__text" style="color: white;">Hello ,${userNikName} !</span >
     `;
   navUserName.innerHTML = html;
   document.querySelector('.modal-open-btn').classList.add('hidden');
